@@ -3,15 +3,17 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>R.T.D. Davis</title>
+    <title>Russel T Davies - Fan Page</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
     <script src='js/main.js'></script>
+    <link rel='icon' type='image/png' id='light-scheme-icon' href='images/light-favicon.png'>
+    <link rel='icon' type='image/png' id='dark-scheme-icon' href='images/dark-favicon.png'>
 </head>
 <body>
     <?php require_once('components/header.php');?>
     <main>
-        <h1>R.T.D. Davis</h1>
+        <h1>Russel T Davies</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veniam exercitationem vitae provident delectus sunt, ea velit molestiae animi veritatis reiciendis assumenda tempora suscipit. Repellat voluptatibus aut qui et asperiores.
         Vitae, asperiores totam aliquid ut aliquam consequatur necessitatibus molestias blanditiis officiis quos illum laudantium perferendis exercitationem, et quidem harum sed? Expedita at ipsum nostrum ipsa maiores. Architecto fuga ullam repellat.
         Eligendi adipisci sapiente cupiditate aliquid tempora! Eligendi ea nesciunt quam ad tempora consequuntur soluta excepturi vitae et. Sapiente officiis pariatur, molestiae voluptas iure magnam fugit eligendi? Illum quisquam numquam saepe.

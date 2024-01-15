@@ -1,4 +1,5 @@
 <header>
+    <h3>R.T.D.</h3>
     <nav>
         <ul>
             <li><a href='.'>Accueil</a></li>
@@ -8,5 +9,4 @@
             <li><a href='contact.php'>Contact</a></li>
         </ul>
     </nav>
-    <h3>R.T.D. Davis</h3>
 </header>
