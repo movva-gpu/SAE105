@@ -15,4 +15,4 @@ jobs:
             
             - name: Copy to VPS
               run: |
-                scp -r ./* mmi23f13@mmi23f13.sae105.ovh:/var/www/sae105
+                scp -o StrictHostKeyChecking=no -r ./* mmi23f13@89.234.180.19:/var/www/sae105
