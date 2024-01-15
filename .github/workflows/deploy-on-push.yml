@@ -1,0 +1,18 @@
+name: Deploy on Push
+run-name: Deploying project to VPS
+on: [push]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: deploy
+              uses: actions/checkout@v2
+            
+            - name: Deploy to VPS
+              uses: webfactory/ssh-agent@master
+              with:
+                ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+            
+            - name: Copy to VPS
+              run: |
+                scp -r ./* mmi23f13@mmi23f13.sae105.ovh:/var/www/sae105
