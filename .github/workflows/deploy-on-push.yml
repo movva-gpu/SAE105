@@ -9,10 +9,14 @@ jobs:
               uses: actions/checkout@v2
             
             - name: Deploy to VPS
-              uses: webfactory/ssh-agent@master
-              with:
-                ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+              run: |
+                install -m 600 -D /dev/null ~/.ssh/id_rsa
+                echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+                ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
             
             - name: Copy to VPS
               run: |
-                scp -o StrictHostKeyChecking=no -r ./* mmi23f13@89.234.180.19:/var/www/sae105
+                scp -r ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }}
+
+            - name: Cleanup
+              run: rm -rf ~./ssh
