@@ -1,12 +1,52 @@
+<?php
+    $is_index_active = false;
+    $is_galerie_active = false;
+    $is_donnees_active = false;
+    $is_partenaires_active = false;
+    $is_contact_active = false;
+
+    $url = $_SERVER['REQUEST_URI'];
+    $url = explode('/', $url);
+    $url = $url[count($url) - 1];
+
+    switch ($url) {
+        case 'index.php':
+            $is_index_active = true;
+            break;
+        case 'galerie.php':
+            $is_galerie_active = true;
+            break;
+        case 'donnees.php':
+            $is_donnees_active = true;
+            break;
+        case 'partenaires.php':
+            $is_partenaires_active = true;
+            break;
+        case 'contact.php':
+            $is_contact_active = true;
+            break;
+        
+        default:
+            $is_index_active = true;
+            break;
+    }
+
+    if ($is_index_active) $index_class = 'active';
+    if ($is_galerie_active) $galerie_class = 'active';
+    if ($is_donnees_active) $donnees_class = 'active';
+    if ($is_partenaires_active) $partenaires_class = 'active';
+    if ($is_contact_active) $contact_class = 'active';
+?>
+
 <header>
-    <h3>R.T.D.</h3>
+    <h2>R.T.D.</h2>
     <nav>
         <ul>
-            <li><a href='.'>Accueil</a></li>
-            <li><a href='galerie.php'>Galerie</a></li>
-            <li><a href='donnees.php'>Ses meilleurs épisodes</a></li>
-            <li><a href='partenaires.php'>Partenaires</a></li>
-            <li><a href='contact.php'>Contact</a></li>
+            <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>
+            <li><a class='<?= $galerie_class ?>' href='galerie.php' title='Galerie'>Galerie</a></li>
+            <li><a class='<?= $donnees_class ?>' href='donnees.php' title='Les meilleures épisodes écrits par RTD'>Ses meilleurs épisodes</a></li>
+            <li><a class='<?= $partenaires_class ?>' href='partenaires.php' title='Mes partenaires'>Partenaires</a></li>
+            <li><a class='<?= $contact_class ?>' href='contact.php' title='Me contacter'>Contact</a></li>
         </ul>
     </nav>
 </header>

@@ -10,4 +10,4 @@ matcher.addListener(function(e) {
         document.head.append(lightSchemeIcon);
         darkSchemeIcon.remove();
     }
-})
+});
