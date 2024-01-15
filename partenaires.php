@@ -9,16 +9,7 @@
     <script src='js/main.js'></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href='index.html'>Accueil</a></li>
-                <li><a href='about.html'>A propos</a></li>
-                <li><a href='contact.html'>Contact</a></li>
-            </ul>
-        </nav>
-        <h3>R.T.D. Davis</h3>
-    </header>
+    <?php require_once('components/header.php');?>
     <main>
         <h1>Partenaires</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veniam exercitationem vitae provident delectus sunt, ea velit molestiae animi veritatis reiciendis assumenda tempora suscipit. Repellat voluptatibus aut qui et asperiores.
@@ -29,10 +20,6 @@
         Temporibus, doloribus. Facilis ut, quas quod praesentium deserunt a assumenda, excepturi mollitia recusandae corporis autem quo numquam quae rerum sed ad ab labore tempora, laudantium molestias! Quia excepturi placeat sit?
         Sequi ratione impedit asperiores maiores, tenetur non totam et harum soluta quaerat quia similique quis quo iusto. At animi repellendus aliquam cupiditate provident. Tempora ad unde, labore facilis corporis molestiae.</p>
     </main>
-    <footer>
-        <ul>
-
-        </ul>
-    </footer>
+    <?php require_once('components/footer.php');?>
 </body>
 </html>
