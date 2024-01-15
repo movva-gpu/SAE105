@@ -4,6 +4,8 @@ body {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Stary-night-sky_-_West_Virginia_-_ForestWander.jpg/1920px-Stary-night-sky_-_West_Virginia_-_ForestWander.jpg);
     position: relative;
     min-height: 100svh;
+    max-height: fit-content;
+    padding: 7.5em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,9 +29,15 @@ a:hover:not(nav a) {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #00000085;
+    backdrop-filter: blur(25px);
     gap: 5em;
 }
 
@@ -51,13 +59,15 @@ nav ul {
 nav a, nav a:hover, nav a:visited {
     --_link-color: white;
     text-decoration: none;
+}
+
+nav a {
     padding: .5em;
-    transition: text-shadow .75s ease-out;
+    transition: text-shadow .33s ease-out;
 }
 
 nav a.active, nav a:hover {
     font-weight: bold;
-    transition: text-shadow .5s ease-out;
     text-shadow: 0 0 100px #fff, 0 0 50px #fff, 0 0 25px #fff, 0 0 12.5px #fff;
 }
 
@@ -69,7 +79,6 @@ nav a.active {
 main {
     max-width: 80%;
     margin: auto;
-    margin-top: 3em;
 }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
