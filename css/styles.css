@@ -99,7 +99,7 @@ article img {
     display: block;
     margin: auto;
     border-radius: 1.25em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.1lh;
     height: 25em;
     box-shadow: #00000055 0 -5px 50px;
 }
@@ -111,7 +111,7 @@ article h1 {
 }
 
 article h2 {
-    margin-bottom: 3lh;
+    margin-bottom: 1lh;
 }
 
 article p {
@@ -134,8 +134,12 @@ article thead {
     font-weight: bolder;
 }
 
-article th {
+article th, article td {
     padding: 1lh 1ch;
+}
+
+.doctor, .series {
+    text-align: center;
 }
 
 footer {

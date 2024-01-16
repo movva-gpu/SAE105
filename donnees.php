@@ -15,11 +15,13 @@
             <h1>Données - Episodes de R.T.D.</h1>
             <table>
                 <thead>
-                    <th>Titre</th>
-                    <th>Première diffusion</th>
-                    <th>Docteur</th>
-                    <th>Companion·ne·s</th>
-                    <th>Saison</th>
+                    <tr scope='col'>
+                        <th>Titre</th>
+                        <th>Première diffusion</th>
+                        <th>Docteur</th>
+                        <th>Companion·ne·s</th>
+                        <th>Saison</th>
+                    </tr>
                 </thead>
                 <tbody>
                 <?php
@@ -28,18 +30,25 @@
                     foreach ($data_json as $keyY => $episode) {
                         echo '<tr>';
                         foreach ($episode as $keyX => $value) {
-                            if ($value == '-------') {
-                                switch ($keyX) {
-                                    case 'series':
-                                        echo '<th class=help title="Cet épisode n\'appartient à aucune série.">'.$value."</th>\n";
-                                        break;
-                                    case 'companion':
-                                        echo '<th class=help title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">'.$value."</th>\n";
-                                        break;
-                                }
-                                continue;
+                            switch ($keyX) {
+                                case 'series':
+                                    if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
+                                    echo '<td class="help '.$keyX.'" title="Cet épisode n\'appartient à aucune série.">'.$value."</th>\n";
+                                    break;
+                                case 'companion':
+                                    if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
+                                    echo '<td class="help '.$keyX.'" title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">'.$value."</th>\n";
+                                    break;
+                                
+                                case 'title':
+                                    echo '<th scope=row class='.$keyX.'>'.$value."</th>\n";
+                                    break;
+
+                                default:
+                                    echo '<td class='.$keyX.'>'.$value."</td>\n";
+                                    break;
+                                    
                             }
-                            echo '<th>'.$value."</th>\n";
                         }
                         echo "</tr>\n";
                     }
