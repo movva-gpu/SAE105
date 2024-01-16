@@ -13,18 +13,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover, a:visited {
-    color: var(--_link-color, #00000085);
+    color: #00000085;
 }
 
 a:not(nav a) {
-    text-decoration: underline dotted 2pt;
+    text-decoration: underline dotted 1.8pt;
     text-underline-offset: .25em;
     text-decoration-skip-ink: none;
-    transition: .167s ease-out;
 }
 
 a:hover:not(nav a) {
-    transition: .167s ease-out;
     text-underline-offset: .33em;
 }
 
@@ -36,34 +34,38 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #00000085;
+    background-color: #fff;
     backdrop-filter: blur(25px);
     gap: 5em;
+    overflow: hidden;
+    transition: background-color .75s ease-out;
 }
 
 header h2 {
-    color: white;
+    color: black;
+    flex-shrink: 0;
     text-shadow: 0 0 100px #fff, 0 0 50px #fff, 0 0 25px #fff, 0 0 12.5px #fff;
 }
 
 nav ul {
+    height: 100%;
     list-style-type: none;
     display: flex;
-    padding: 0;
     margin: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2em;
+    flex-shrink: 0;
 }
 
 nav a, nav a:hover, nav a:visited {
-    --_link-color: white;
+    color: #000;
     text-decoration: none;
 }
 
 nav a {
+    flex-shrink: 0;
     padding: .5em;
-    transition: text-shadow .33s ease-out;
 }
 
 nav a.active, nav a:hover {
@@ -72,7 +74,7 @@ nav a.active, nav a:hover {
 }
 
 nav a.active {
-    border: solid 2pt white;
+    border: solid 2pt #000;
     border-radius: .5em;
 }
 
@@ -86,28 +88,53 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 }
 
 article {
-    max-width: 67ch;
+    font-size: 1.05rem;
     margin: auto;
     border-radius: 2em;
     background: white;
     box-shadow: 0 0 90px #fff;
-    padding: 8em;
+    padding: 6em;
 }
 
 article img {
     display: block;
     margin: auto;
-    border-radius: 1em;
+    border-radius: 1.25em;
+    margin-bottom: 2rem;
     height: 25em;
+    box-shadow: #00000055 0 -5px 50px;
 }
 
 article h1 {
-    margin: 1em;
-    font-size: 2em;
+    margin: 1em 1lh;
+    font-size: 2.8em;
+    margin: .5em .5lh;
+}
+
+article h2 {
+    margin-bottom: 3lh;
 }
 
 article p {
-    margin: 0;
+    margin-block: 2.5lh;
+}
+
+article table {
+    margin-top: 2lh;
+}
+
+article table *, article table {
+    border: 2px solid black;
+}
+
+article thead {
+    background-color: #000;
+    color: white;
+    font-weight: bolder;
+}
+
+article th {
+    padding: .5lh .5ch;
 }
 
 footer {
@@ -122,10 +149,23 @@ footer {
 footer p {
     display: block;
     margin: 0;
-    min-width: 67ch;
+    padding-block: 2ch;
+    padding-inline: 2lh;
+    max-width: 67ch;
     border-radius: 2em 2em 0 0;
     background: white;
     box-shadow: 0 0 90px #fff;
     text-align: center;
-    padding: .75em;
+}
+
+*:not(body *) {
+    background-color: #000;
+}
+
+.help {
+    cursor: help;
+    color: #000000AA;
+    text-decoration: underline dotted 1.8pt;
+    text-underline-offset: .25em;
+    text-decoration-skip-ink: none;
 }

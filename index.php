@@ -13,8 +13,9 @@
     <?php require_once('components/header.php');?>
     <main>
         <article>
-            <img src='images/rtd-avatar.jpg' alt='Photo of Russel T Davies'>
             <h1>Russell T Davies</h1>
+            <h2>A Doctor Who show runner</h2>
+            <img src='images/rtd-avatar.jpg' alt='Photo of Russel T Davies'>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veniam exercitationem vitae provident delectus sunt, ea velit molestiae animi veritatis reiciendis assumenda tempora suscipit. Repellat voluptatibus aut qui et asperiores.
                 Vitae, asperiores totam aliquid ut aliquam consequatur necessitatibus molestias blanditiis officiis quos illum laudantium perferendis exercitationem, et quidem harum sed? Expedita at ipsum nostrum ipsa maiores. Architecto fuga ullam repellat.
                 Eligendi adipisci sapiente cupiditate aliquid tempora! Eligendi ea nesciunt quam ad tempora consequuntur soluta excepturi vitae et. Sapiente officiis pariatur, molestiae voluptas iure magnam fugit eligendi? Illum quisquam numquam saepe.

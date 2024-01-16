@@ -44,7 +44,7 @@
         <ul>
             <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>
             <li><a class='<?= $galerie_class ?>' href='galerie.php' title='Galerie'>Galerie</a></li>
-            <li><a class='<?= $donnees_class ?>' href='donnees.php' title='Les meilleures épisodes écrits par RTD'>Ses meilleurs épisodes</a></li>
+            <li><a class='<?= $donnees_class ?>' href='donnees.php' title='Episodes écrits par RTD'>Ses épisodes</a></li>
             <li><a class='<?= $partenaires_class ?>' href='partenaires.php' title='Mes partenaires'>Partenaires</a></li>
             <li><a class='<?= $contact_class ?>' href='contact.php' title='Me contacter'>Contact</a></li>
         </ul>
