@@ -3,8 +3,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Stary-night-sky_-_West_Virginia_-_ForestWander.jpg/1920px-Stary-night-sky_-_West_Virginia_-_ForestWander.jpg);
     position: relative;
-    min-height: 100svh;
-    max-height: fit-content;
+    min-height: calc(100svh - 7.5em * 2);
     padding: 7.5em 0;
 }
 
@@ -35,7 +34,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
     gap: 5em;
     overflow: hidden;
     transition: background-color .75s ease-out;
@@ -79,7 +78,6 @@ nav a.active {
 }
 
 main {
-    max-width: 80%;
     margin: auto;
 }
 
@@ -93,7 +91,8 @@ article {
     border-radius: 2em;
     background: white;
     box-shadow: 0 0 90px #fff;
-    padding: 6em;
+    padding: 4em 4lh;
+    max-width: fit-content  ;
 }
 
 article img {
@@ -116,11 +115,13 @@ article h2 {
 }
 
 article p {
-    margin-block: 2.5lh;
+    display: block;
+    margin: auto;
+    max-width: 67ch;
 }
 
 article table {
-    margin-top: 2lh;
+    margin-block: 2lh;
 }
 
 article table *, article table {
@@ -134,7 +135,7 @@ article thead {
 }
 
 article th {
-    padding: .5lh .5ch;
+    padding: 1lh 1ch;
 }
 
 footer {
@@ -164,8 +165,9 @@ footer p {
 
 .help {
     cursor: help;
-    color: #000000AA;
+    color: #00000085;
     text-decoration: underline dotted 1.8pt;
+    text-align: center;
     text-underline-offset: .25em;
     text-decoration-skip-ink: none;
 }

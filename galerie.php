@@ -7,7 +7,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
     <script src='js/main.js'></script>
-    <link rel='icon' type='image/png' id='dark-scheme-icon' href='images/icon.svg'>
 </head>
 <body>
     <?php require_once('components/header.php');?>
