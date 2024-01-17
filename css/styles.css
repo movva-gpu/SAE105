@@ -89,6 +89,7 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 }
 
 article {
+    position: relative;
     font-size: 1.05rem;
     margin: auto;
     border-radius: 2em;
@@ -105,6 +106,24 @@ article img {
     margin-bottom: 1.1lh;
     height: 25em;
     box-shadow: #00000055 0 -5px 50px;
+}
+
+img.dw {
+    box-shadow: none;
+    position: absolute;
+    height: 15%;
+    top: 1lh;
+    left: 1lh;
+}
+
+img.bbc {
+    box-shadow: none;
+    position: absolute;
+    height: auto;
+    width: 15%;
+    top: 1lh;
+    right: 1lh;
+    border-radius: 0 .6em 0 0;
 }
 
 article h1 {

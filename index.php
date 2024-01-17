@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='zxx'>
+<html lang='fr'>
 <head>
     <title>Russell T Davies - Fan Page</title>
     
@@ -19,13 +19,9 @@
             <h1>Russell T Davies</h1>
             <h2>A Doctor Who show runner</h2>
             <img src='images/rtd.jpg' alt='Photo of Russel T Davies'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veniam exercitationem vitae provident delectus sunt, ea velit molestiae animi veritatis reiciendis assumenda tempora suscipit. Repellat voluptatibus aut qui et asperiores.
-                Vitae, asperiores totam aliquid ut aliquam consequatur necessitatibus molestias blanditiis officiis quos illum laudantium perferendis exercitationem, et quidem harum sed? Expedita at ipsum nostrum ipsa maiores. Architecto fuga ullam repellat.
-                Eligendi adipisci sapiente cupiditate aliquid tempora! Eligendi ea nesciunt quam ad tempora consequuntur soluta excepturi vitae et. Sapiente officiis pariatur, molestiae voluptas iure magnam fugit eligendi? Illum quisquam numquam saepe.
-                Similique deserunt dicta ratione corrupti omnis, ea amet libero nemo quas, necessitatibus odit nulla esse, exercitationem quisquam cumque fugiat dolorem ducimus distinctio laudantium. Labore nam doloremque natus distinctio cumque quae.
-                Sit nostrum voluptas maxime officiis dicta nesciunt nihil ratione suscipit dolor veritatis reiciendis aperiam dolorem quas explicabo, molestias, officia ipsam totam temporibus harum placeat amet consectetur! Velit debitis perferendis ab?
-                Temporibus, doloribus. Facilis ut, quas quod praesentium deserunt a assumenda, excepturi mollitia recusandae corporis autem quo numquam quae rerum sed ad ab labore tempora, laudantium molestias! Quia excepturi placeat sit?
-                Sequi ratione impedit asperiores maiores, tenetur non totam et harum soluta quaerat quia similique quis quo iusto. At animi repellendus aliquam cupiditate provident. Tempora ad unde, labore facilis corporis molestiae.</p>
+            <img class='dw' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Doctor_Who_Logo_2023.svg/langfr-1024px-Doctor_Who_Logo_2023.svg.png' alt='Logo de Doctor Who 2023'>
+            <img class='bbc' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/640px-BBC_Logo_2021.svg.png'>
+            <p>Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de télévision et un écrivain gallois. Il est principalement connu pour être un pionnier de l'écriture de séries telles que Queer as Folk et The Second Coming, et pour être à l'origine du renouveau d'une des plus anciennes séries télévisées de science-fiction, Doctor Who, dont il a notamment créé les séries dérivées Torchwood et The Sarah Jane Adventures. </p>
         </article>
     </main>
     <?php require_once('components/footer.php');?>
