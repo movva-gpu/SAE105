@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang='zxx'>
 <head>
+    <title>Données</title>
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Données</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/date-euro.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/any-number.js"></script>
     <script src='js/main.js'></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"/>
 </head>
 <body>
     <?php require_once('components/header.php'); ?>
     <main>
         <article>
             <h1>Données - Episodes de R.T.D.</h1>
-            <table>
+            <table id='datatable'>
                 <thead>
                     <tr scope='col'>
                         <th>Titre</th>
                         <th>Première diffusion</th>
                         <th>Docteur</th>
-                        <th>Companion·ne·s</th>
+                        <th>Compagnon·s ou Compagne·s</th>
                         <th>Saison</th>
                     </tr>
                 </thead>

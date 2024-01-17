@@ -1,12 +1,12 @@
-window.addEventListener('scroll', function() {
+$(window).scroll(function() {
     updateStyles();
 });
 
-window.addEventListener('load', function() {
-    updateStyles();
-});
+// $(window).load(function() {
+//     updateStyles();
+// });
 
-window.addEventListener('resize', function() {
+$(window).resize(function() {
     updateStyles();
 });
 
@@ -37,3 +37,19 @@ function updateStyles() {
         }
     }
 }
+
+$(document).ready(function() {
+    $('#datatable').DataTable({
+        language: {
+            url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json'
+        },
+        columnDefs: [
+            { type: 'date-euro', targets: 1 },
+            { type: 'any-number', targets: 2 },
+            { type: 'any-number', targets: 4 }
+        ],
+        scrollCollapse: false,
+        scrollY: '60svh',
+        paging: false
+    });
+});

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang='zxx'>
 <head>
+    <title>Russell T Davies - Fan Page</title>
+    
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Russell T Davies - Fan Page</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src='js/main.js'></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
 </head>
 <body>
     <?php require_once('components/header.php');?>
