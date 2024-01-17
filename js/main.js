@@ -21,6 +21,8 @@ function updateStyles() {
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'black';
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'black';
                 }
+            } else if (header.children.item(i).tagName === 'A') {
+                header.children.item(i).children.item(0).style.color = 'black';
             }
             header.children.item(i).style.color = 'black';
         }
@@ -32,6 +34,8 @@ function updateStyles() {
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'white';
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'white';
                 }
+            } else if (header.children.item(i).tagName === 'A') {
+                header.children.item(i).children.item(0).style.color = 'white';
             }
             header.children.item(i).style.color = 'white';
         }

@@ -39,7 +39,7 @@
 ?>
 
 <header>
-    <h2>R.T.D.</h2>
+    <a href='.' title='Accueil' class='no-decoration '><h2>R.T.D.</h2></a>
     <nav>
         <ul>
             <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>

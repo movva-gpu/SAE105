@@ -1,2 +1,7 @@
 jsconfig.json
-.vscode/*
+.vscode/
+
+vendor/
+composer.lock
+
+config/
