@@ -1,5 +1,5 @@
 # SAE105 - Produire un site web
-> <https://mmi23f13.sae105.ovh>
+> <http://mmi23f13.sae105.ovh>
 
 Site créé dans le cadre de la SAE105 sur le thème du cinéma : Russell T Davies, un showrunner de Doctor Who
 
