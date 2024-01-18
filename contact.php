@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     // require __DIR__.'/vendor/autoload.php';
 
     // use PHPMailer\PHPMailer\PHPMailer;
@@ -24,7 +24,7 @@
         // $mail = new PHPMailer(true);
     }
 
-?>
+?> -->
 <!DOCTYPE html>
 <html lang='zxx'>
 <head>
@@ -47,7 +47,8 @@
     <main>
         <article>
             <h1>Contact</h1>
-            <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>'; if(!$sent && $post) echo '<p class=error>Something went wrong</p><br>'?>
+            <!-- <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>'; if(!$sent && $post) echo '<p class=error>Something went wrong</p><br>'?> -->
+            <p class='warning'>W.I.P.</p><br>
             <form method='post' action='contact.php'>
                 <div id='author'>
                     <div id='label'>
@@ -59,9 +60,13 @@
                         <input type='text' name='name' id='name' placeholder='Doe' required>
                     </div>
                 </div>
-                <input type='text' name='email' placeholder='E-mail (facultatif)'>
-                <input type='text' name='subject' placeholder='Objet' required>
-                <textarea type='text' name='message' placeholder='Un magnifique message' required></textarea>
+                <label for='email'>E-mail</label>
+                <input type='email' name='email' id='email' placeholder='E-mail (facultatif)'>
+                <label for='subject'>Objet</label>
+                <input type='text' name='subject' id='subject' placeholder='Objet' required>
+                <br>
+                <label for='message'>Message</label>
+                <textarea name='message' id='message' placeholder='Un magnifique message' required></textarea>
 
                 <button type='submit' name='submit'>Envoyer</button>
             </form>

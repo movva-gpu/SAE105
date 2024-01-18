@@ -252,12 +252,13 @@ form {
     width: 50%;
 }
 
-.success, .error {
+.success, .error, .warning {
     width: calc(100% - 1em * 2);
     background-color: var(--_back);
     border-radius: .75em;
     color: var(--_color);
     padding: 1lh 1em;
+    font-weight: bolder;
 }
 
 .success {
@@ -266,8 +267,13 @@ form {
 }
 
 .error {
-    --_back: rgb(253, 191, 191);
+    --_back: lightcoral;
     --_color: red;
+}
+
+.warning {
+    --_back: rgb(255, 225, 168);
+    --_color: orange;
 }
 
 textarea {
