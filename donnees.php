@@ -45,7 +45,7 @@
                             switch ($keyX) {
                                 case 'series':
                                     if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
-                                    echo '<td class="help '.$keyX.'" title="Cet épisode n\'appartient à aucune série.">'.$value."</th>\n";
+                                    echo '<td class="help '.$keyX.'" title="Cet épisode n\'appartient à aucune série.">'.$value."</td>\n";
                                     break;
                                 case 'companion':
                                     if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
