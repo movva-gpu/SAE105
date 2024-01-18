@@ -31,7 +31,7 @@
                     echo '<img height=380 src='.$gallery_path.$file.
                     ' alt="'.file_get_contents($gallery_path.'alt/'.$file_name.'.txt').
                     '" title="'.file_get_contents($gallery_path.'alt/'.$file_name.'.txt').'"'.
-                    'style="background-image: url(\''.$gallery_path.'lowres/'.$file.'\'); '.
+                    ' style="background-image: url(\''.$gallery_path.'lowres/'.$file.'\'); '.
                     'background-size: cover">';
                 }
             ?>
