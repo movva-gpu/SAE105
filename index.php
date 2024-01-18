@@ -21,7 +21,7 @@
     <main>
         <article>
             <h1>Russell T Davies</h1>
-            <h2>A Doctor Who show runner</h2>
+            <h2>Un show-runner Doctor Who</h2>
             <img src='images/rtd.jpg' alt='Photo of Russel T Davies'>
             <img class='dw' src='images/dw-cropped.png' alt='Logo de Doctor Who (2023)'>
             <img class='bbc' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/240px-BBC_Logo_2021.svg.png' alt='Le logo de la BBC'>
