@@ -1,12 +1,12 @@
-$(window).scroll(function() {
+$(window).scroll(function () {
     updateStyles();
 });
 
 // $(window).load(function() {
-//     updateStyles();
+//         updateStyles();
 // });
 
-$(window).resize(function() {
+$(window).resize(function () {
     updateStyles();
 });
 
@@ -18,10 +18,23 @@ function updateStyles() {
         header.style.backgroundColor = 'white';
         for (let i = 0; i < header.children.length; i++) {
             if (header.children.item(i).tagName === 'NAV') {
-                for (let j = 0; j < header.children.item(i).children.item(0).children.length; j++) {
-                    header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'black';
-                    header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'black';
-                    styleEl.innerHTML = 'nav a.active::after { border-color: transparent; filter: none }';
+                for (
+                    let j = 0;
+                    j < header.children.item(i).children.item(0).children.length;
+                    j++
+                ) {
+                    header.children
+                        .item(i)
+                        .children.item(0)
+                        .children.item(j)
+                        .children.item(0).style.color = 'black';
+                    header.children
+                        .item(i)
+                        .children.item(0)
+                        .children.item(j)
+                        .children.item(0).style.borderColor = 'black';
+                    styleEl.innerHTML =
+                        'nav a.active::after { border-color: transparent; filter: none }';
                 }
             } else if (header.children.item(i).tagName === 'A') {
                 header.children.item(i).children.item(0).style.color = 'black';
@@ -32,11 +45,23 @@ function updateStyles() {
         header.style.backgroundColor = '#00000085';
         for (let i = 0; i < header.children.length; i++) {
             if (header.children.item(i).tagName === 'NAV') {
-                for (let j = 0; j < header.children.item(i).children.item(0).children.length; j++) {
-                    header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'white';
-                    header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'white';
-                    styleEl.innerHTML = 'nav a.active::after { border-color: white; filter: blur(5px) }';
-
+                for (
+                    let j = 0;
+                    j < header.children.item(i).children.item(0).children.length;
+                    j++
+                ) {
+                    header.children
+                        .item(i)
+                        .children.item(0)
+                        .children.item(j)
+                        .children.item(0).style.color = 'white';
+                    header.children
+                        .item(i)
+                        .children.item(0)
+                        .children.item(j)
+                        .children.item(0).style.borderColor = 'white';
+                    styleEl.innerHTML =
+                        'nav a.active::after { border-color: white; filter: blur(5px) }';
                 }
             } else if (header.children.item(i).tagName === 'A') {
                 header.children.item(i).children.item(0).style.color = 'white';
@@ -46,18 +71,18 @@ function updateStyles() {
     }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#datatable').DataTable({
         language: {
-            url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json'
+            url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json',
         },
         columnDefs: [
             { type: 'date-euro', targets: 1 },
             { type: 'any-number', targets: 2 },
-            { type: 'any-number', targets: 4 }
+            { type: 'any-number', targets: 4 },
         ],
         scrollCollapse: false,
         scrollY: '60svh',
-        paging: false
+        paging: false,
     });
 });

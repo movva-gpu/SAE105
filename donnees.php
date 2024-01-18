@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang='zxx'>
+<html lang='fr'>
+
 <head>
     <title>Données</title>
 
@@ -10,7 +11,7 @@
     <meta name='author' content='Danyella Strikann'>
     <meta name='keywords' content='Russell T Davies, Doctor Who, BBC, Fan Page, RTD, RT Davies, R.T.D.'>
     <meta name='robots' content='index, follow'>
-    
+
     <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
     <script src='https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js'></script>
     <script src='https://cdn.datatables.net/plug-ins/1.13.7/sorting/date-euro.js'></script>
@@ -20,6 +21,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
     <link rel='stylesheet' href='https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css'>
 </head>
+
 <body>
     <?php require_once('components/header.php'); ?>
     <main>
@@ -36,7 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php
+                    <?php
                     $data_file = file_get_contents('datas/data.json');
                     $data_json = json_decode($data_file, true);
                     foreach ($data_json as $keyY => $episode) {
@@ -44,32 +46,38 @@
                         foreach ($episode as $keyX => $value) {
                             switch ($keyX) {
                                 case 'series':
-                                    if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
-                                    echo '<td class="help '.$keyX.'" title="Cet épisode n\'appartient à aucune série.">'.$value."</td>\n";
+                                    if ($value !== '-------') {
+                                        echo '<td class=' . $keyX . '>' . $value . "</td>\n";
+                                        break;
+                                    }
+                                    echo '<td class="help ' . $keyX . '" title="Cet épisode n\'appartient à aucune série.">' . $value . "</td>\n";
                                     break;
                                 case 'companion':
-                                    if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
-                                    echo '<td class="help '.$keyX.'" title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">'.$value."</td>\n";
+                                    if ($value !== '-------') {
+                                        echo '<td class=' . $keyX . '>' . $value . "</td>\n";
+                                        break;
+                                    }
+                                    echo '<td class="help ' . $keyX . '" title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">' . $value . "</td>\n";
                                     break;
-                                
+
                                 case 'title':
-                                    echo '<th scope=row class='.$keyX.'>'.$value."</th>\n";
+                                    echo '<th scope=row class=' . $keyX . '>' . $value . "</th>\n";
                                     break;
 
                                 default:
-                                    echo '<td class='.$keyX.'>'.$value."</td>\n";
+                                    echo '<td class=' . $keyX . '>' . $value . "</td>\n";
                                     break;
-                                    
                             }
                         }
                         echo "</tr>\n";
                     }
-                ?>
+                    ?>
                 </tbody>
             </table>
             <p class="help" title='Dans le cadre de la SAE, certains épisodes rédigé par Chris Chibnall ont été inclus.'>Certains des épisodes ne sont pas réellement écrits par Russell T Davis et certaines dates peuvent être légèrement décalées</p>
         </article>
     </main>
-    <?php require_once('components/footer.php');?>
+    <?php require_once('components/footer.php'); ?>
 </body>
+
 </html>

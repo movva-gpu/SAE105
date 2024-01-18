@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image: url('../images/background.avif');
     background-size: cover;
     position: relative;
@@ -8,22 +9,29 @@ body {
     padding: 7.5em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-a, a:hover, a:visited {
-    color: #000000AA;
+a,
+a:hover,
+a:visited {
+    color: #000000aa;
 }
 
 a:not(nav a) {
     text-decoration: underline dotted 1.8pt;
-    text-underline-offset: .25em;
+    text-underline-offset: 0.25em;
     text-decoration-skip-ink: none;
 }
 
 a:hover:not(nav a) {
-    text-underline-offset: .33em;
+    text-underline-offset: 0.33em;
 }
 
 a.no-decoration {
@@ -46,18 +54,18 @@ header {
     backdrop-filter: blur(10px);
     gap: 1rem;
     overflow: hidden;
-    transition: background-color .33s ease-out;
+    transition: background-color 0.33s ease-out;
     z-index: 999;
 }
 
 header h2 {
     color: black;
     text-shadow: 0 0 100px #fff, 0 0 50px #fff, 0 0 25px #fff, 0 0 12.5px #fff;
-    transition: color .33s ease-out;
+    transition: color 0.33s ease-out;
 }
 
 nav {
-    width: 50%
+    width: 50%;
 }
 
 nav ul {
@@ -70,47 +78,55 @@ nav ul {
     text-align: center;
 }
 
-nav a, nav a:hover, nav a:visited {
+nav a,
+nav a:hover,
+nav a:visited {
     color: #000;
     text-decoration: none;
-    transition: color .33s ease-out;
+    transition: color 0.33s ease-out;
 }
 
 nav a {
     flex-shrink: 0;
-    padding: .5em;
+    padding: 0.5em;
 }
 
-nav a.active, nav a:hover {
+nav a.active,
+nav a:hover {
     font-weight: bold;
     text-shadow: 0 0 100px #fff, 0 0 50px #fff, 0 0 25px #fff, 0 0 12.5px #fff;
 }
 
 nav a.active {
     position: relative;
-    transition: .33s ease-out;
+    transition: 0.33s ease-out;
     border: solid 2pt #000;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
 nav a.active::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: -2pt;
     left: -2pt;
     width: 100%;
     height: 100%;
-    transition: .33s ease-out;
+    transition: 0.33s ease-out;
     border: solid 2pt transparent;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
 main {
     margin: auto;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
     text-align: center;
 }
 
@@ -122,7 +138,7 @@ article {
     background: white;
     box-shadow: 0 0 90px #fff;
     padding: 4em 4lh;
-    max-width: fit-content  ;
+    max-width: fit-content;
 }
 
 article img {
@@ -149,11 +165,11 @@ img.bbc {
     width: 15%;
     top: 1lh;
     right: 1lh;
-    border-radius: 0 .6em 0 0;
+    border-radius: 0 0.6em 0 0;
 }
 
 article h1 {
-    margin: 0 1em .5lh 1em;
+    margin: 0 1em 0.5lh 1em;
     font-size: 2.8em;
 }
 
@@ -171,7 +187,8 @@ article p {
     margin-block: 2lh !important;
 }
 
-tbody td, thead th {
+tbody td,
+thead th {
     text-align: center !important;
 }
 
@@ -182,12 +199,13 @@ table tbody th {
 
 #datatable_wrapper a {
     cursor: pointer;
-    margin-inline: .5em;
+    margin-inline: 0.5em;
     border: solid 2pt #000;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
-#datatable_wrapper .current, #datatable_wrapper a:hover {
+#datatable_wrapper .current,
+#datatable_wrapper a:hover {
     background-color: black;
     background-image: none;
     color: white !important;
@@ -220,10 +238,10 @@ footer p {
 
 .help {
     cursor: help;
-    color: #000000AA;
+    color: #000000aa;
     text-decoration: underline dotted 1.8pt;
     text-align: center;
-    text-underline-offset: .25em;
+    text-underline-offset: 0.25em;
     text-decoration-skip-ink: none;
 }
 
@@ -232,9 +250,8 @@ form {
     flex-direction: column;
     justify-content: center;
     width: 67ch;
-    gap: 1lh
+    gap: 1lh;
 }
-
 
 #author {
     gap: 1em;
@@ -245,17 +262,19 @@ form {
 #author * {
     display: flex;
     width: 100%;
-    gap : 2em;
+    gap: 2em;
 }
 
 #author * * {
     width: 50%;
 }
 
-.success, .error, .warning {
+.success,
+.error,
+.warning {
     width: calc(100% - 1em * 2);
     background-color: var(--_back);
-    border-radius: .75em;
+    border-radius: 0.75em;
     color: var(--_color);
     padding: 1lh 1em;
     font-weight: bolder;
@@ -278,31 +297,36 @@ form {
 
 textarea {
     height: 33svh;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
 }
 
-input, textarea, button {
-    padding: .25lh 1em !important;
+input,
+textarea,
+button {
+    padding: 0.25lh 1em !important;
     border: solid black 2pt !important;
-    border-radius: .75em !important;
+    border-radius: 0.75em !important;
 }
 
 input {
     height: 2lh !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    font-size: .9rem !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 0.9rem !important;
 }
 
-#subject, textarea {
-    max-width: calc(100% - 2*2pt - 2*1em);
-    min-width: calc(100% - 2*2pt - 2*1em);
-    min-height: calc(1lh + .25lh);
+#subject,
+textarea {
+    max-width: calc(100% - 2 * 2pt - 2 * 1em);
+    min-width: calc(100% - 2 * 2pt - 2 * 1em);
+    min-height: calc(1lh + 0.25lh);
 }
 
 button {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: .9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
     width: 7em;
     align-self: flex-end;
     cursor: pointer;
@@ -314,7 +338,7 @@ button {
 
 button:hover {
     transform: translate(-5px -5px) scale(105%);
-    box-shadow: #000 ;
+    box-shadow: #000;
 }
 
 article:has(#gallery) {
@@ -335,14 +359,14 @@ article:has(#gallery) {
     height: 20em;
     margin: 0;
     filter: brightness(50%);
-    transition: .167s cubic-bezier(0, 0, 0, 1);
+    transition: 0.167s cubic-bezier(0, 0, 0, 1);
     will-change: transform;
 }
 
 #gallery img:hover {
     scale: 150%;
     filter: brightness(100%);
-    transition: .33s cubic-bezier(0, 0, 0, 2.37);
-    box-shadow: 0 0 15px #000000AA;
+    transition: 0.33s cubic-bezier(0, 0, 0, 2.37);
+    box-shadow: 0 0 15px #000000aa;
     z-index: 50;
 }

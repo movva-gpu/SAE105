@@ -1,32 +1,33 @@
 <!-- <?php
-    // require __DIR__.'/vendor/autoload.php';
+        // require __DIR__.'/vendor/autoload.php';
 
-    // use PHPMailer\PHPMailer\PHPMailer;
-    // use PHPMailer\PHPMailer\SMTP;
-    // use PHPMailer\PHPMailer\Exception;
-    error_reporting(0);
+        // use PHPMailer\PHPMailer\PHPMailer;
+        // use PHPMailer\PHPMailer\SMTP;
+        // use PHPMailer\PHPMailer\Exception;
+        error_reporting(0);
 
-    if ($_POST['first-name']) {
-        $first_name     = $_POST['first-name'];
-        $name           = $_POST['name'];
-        $from           = $_POST['email'] ? $_POST['email']: 'anonymous@xyz';
-        $subject        = $_POST['subject'];
-        $message        = $_POST['message'];
+        if ($_POST['first-name']) {
+            $first_name     = $_POST['first-name'];
+            $name           = $_POST['name'];
+            $from           = $_POST['email'] ? $_POST['email'] : 'anonymous@xyz';
+            $subject        = $_POST['subject'];
+            $message        = $_POST['message'];
 
-        $to = file_get_contents('config/email');
-        $headers    = 'From: '.$from."\r\n".'Reply-To: '.$from."\r\n".'X-Mailer: PHP/'. phpversion();
+            $to = file_get_contents('config/email');
+            $headers    = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
-        $sent = mail($to, $subject, $message, $headers);
+            $sent = mail($to, $subject, $message, $headers);
 
-        $post = true;
+            $post = true;
 
 
-        // $mail = new PHPMailer(true);
-    }
+            // $mail = new PHPMailer(true);
+        }
 
-?> -->
+        ?> -->
 <!DOCTYPE html>
 <html lang='zxx'>
+
 <head>
     <title>Contact</title>
 
@@ -42,12 +43,14 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
 </head>
+
 <body>
-    <?php require_once('components/header.php');?>
+    <?php require_once('components/header.php'); ?>
     <main>
         <article>
             <h1>Contact</h1>
-            <!-- <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>'; if(!$sent && $post) echo '<p class=error>Something went wrong</p><br>'?> -->
+            <!-- <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>';
+                    if (!$sent && $post) echo '<p class=error>Something went wrong</p><br>' ?> -->
             <p class='warning'>W.I.P.</p><br>
             <form method='post' action='contact.php'>
                 <div id='author'>
@@ -72,6 +75,7 @@
             </form>
         </article>
     </main>
-    <?php require_once('components/footer.php');?>
+    <?php require_once('components/footer.php'); ?>
 </body>
+
 </html>
