@@ -38,9 +38,7 @@
     <meta name='author' content='Danyella Strikann'>
     <meta name='keywords' content='Russell T Davies, Doctor Who, BBC, Fan Page, RTD, RT Davies, R.T.D.'>
     <meta name='robots' content='index, follow'>
-
-    <script src='js/main.js'></script>
-
+    
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
 </head>
 
@@ -70,12 +68,15 @@
                 <br>
                 <label for='message'>Message</label>
                 <textarea name='message' id='message' placeholder='Un magnifique message' required></textarea>
-
+                
                 <button type='submit' name='submit'>Envoyer</button>
             </form>
         </article>
     </main>
     <?php require_once('components/footer.php'); ?>
+
+    <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
+    <script src='js/main.js'></script>
 </body>
 
 </html>

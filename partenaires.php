@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang='zxx'>
+
 <head>
     <title>Partenaires</title>
-    
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -10,14 +11,12 @@
     <meta name='author' content='Danyella Strikann'>
     <meta name='keywords' content='Russell T Davies, Doctor Who, BBC, Fan Page, RTD, RT Davies, R.T.D.'>
     <meta name='robots' content='index, follow'>
-    
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src='js/main.js'></script>
-    
+
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
 </head>
+
 <body>
-    <?php require_once('components/header.php');?>
+    <?php require_once('components/header.php'); ?>
     <main>
         <article>
             <h1>Partenaires</h1>
@@ -30,6 +29,10 @@
                 Sequi ratione impedit asperiores maiores, tenetur non totam et harum soluta quaerat quia similique quis quo iusto. At animi repellendus aliquam cupiditate provident. Tempora ad unde, labore facilis corporis molestiae.</p>
         </article>
     </main>
-    <?php require_once('components/footer.php');?>
+    <?php require_once('components/footer.php'); ?>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src='js/main.js'></script>
 </body>
+
 </html>
