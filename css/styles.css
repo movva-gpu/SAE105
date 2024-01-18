@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover, a:visited {
-    color: #00000085;
+    color: #000000AA;
 }
 
 a:not(nav a) {
@@ -207,7 +207,7 @@ footer p {
 
 .help {
     cursor: help;
-    color: #00000085;
+    color: #000000AA;
     text-decoration: underline dotted 1.8pt;
     text-align: center;
     text-underline-offset: .25em;
@@ -298,15 +298,32 @@ button:hover {
     box-shadow: #000 ;
 }
 
+article:has(#gallery) {
+    max-width: 75%;
+}
+
 #gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1em;
+    justify-content: space-evenly;
+    gap: 3rem;
 }
 
 #gallery img {
+    min-width: 0;
+    aspect-ratio: auto;
     cursor: help;
-    height: 25em;
+    height: 20em;
     margin: 0;
+    filter: brightness(50%);
+    transition: .167s cubic-bezier(0, 0, 0, 1);
+    will-change: transform;
+}
+
+#gallery img:hover {
+    scale: 150%;
+    filter: brightness(100%);
+    transition: .33s cubic-bezier(0, 0, 0, 2.37);
+    box-shadow: 0 0 15px #000000AA;
+    z-index: 50;
 }
