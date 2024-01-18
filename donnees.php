@@ -27,12 +27,12 @@
             <h1>Données - Episodes de R.T.D.</h1>
             <table id='datatable'>
                 <thead>
-                    <tr scope='col'>
+                    <tr>
                         <th>Titre</th>
-                        <th>Première diffusion</th>
-                        <th>Docteur</th>
-                        <th>Compagnon·s ou Compagne·s</th>
-                        <th>Saison</th>
+                        <th scope='col'>Première diffusion</th>
+                        <th scope='col'>Docteur</th>
+                        <th scope='col'>Compagnon·s ou Compagne·s</th>
+                        <th scope='col'>Saison</th>
                     </tr>
                 </thead>
                 <tbody>
