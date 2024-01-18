@@ -297,3 +297,16 @@ button:hover {
     transform: translate(-5px -5px) scale(105%);
     box-shadow: #000 ;
 }
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#gallery img {
+    cursor: help;
+    height: 25em;
+    margin: 0;
+}
