@@ -1,7 +1,8 @@
+config/
+
 jsconfig.json
 .vscode/
+.prettierrc
 
 vendor/
 composer.lock
-
-config/
