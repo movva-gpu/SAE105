@@ -11,14 +11,14 @@
     <meta name='keywords' content='Russell T Davies, Doctor Who, BBC, Fan Page, RTD, RT Davies, R.T.D.'>
     <meta name='robots' content='index, follow'>
     
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/date-euro.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/any-number.js"></script>
+    <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
+    <script src='https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js'></script>
+    <script src='https://cdn.datatables.net/plug-ins/1.13.7/sorting/date-euro.js'></script>
+    <script src='https://cdn.datatables.net/plug-ins/1.13.7/sorting/any-number.js'></script>
     <script src='js/main.js'></script>
 
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"/>
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css'>
 </head>
 <body>
     <?php require_once('components/header.php'); ?>
@@ -49,7 +49,7 @@
                                     break;
                                 case 'companion':
                                     if ($value !== '-------') { echo '<td class='.$keyX.'>'.$value."</td>\n"; break; }
-                                    echo '<td class="help '.$keyX.'" title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">'.$value."</th>\n";
+                                    echo '<td class="help '.$keyX.'" title="Cet épisode se déroule avec le Docteur seul et/ou seulement des personnages secondaires.">'.$value."</td>\n";
                                     break;
                                 
                                 case 'title':
