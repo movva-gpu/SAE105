@@ -13,6 +13,7 @@ $(window).resize(function() {
 function updateStyles() {
     let scrollY = window.scrollY;
     let header = window.document.querySelector('header');
+    let styleEl = document.head.appendChild(document.createElement('style'));
     if (scrollY == 0) {
         header.style.backgroundColor = 'white';
         for (let i = 0; i < header.children.length; i++) {
@@ -20,6 +21,7 @@ function updateStyles() {
                 for (let j = 0; j < header.children.item(i).children.item(0).children.length; j++) {
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'black';
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'black';
+                    styleEl.innerHTML = 'nav a.active::after { border-color: transparent; filter: none }';
                 }
             } else if (header.children.item(i).tagName === 'A') {
                 header.children.item(i).children.item(0).style.color = 'black';
@@ -33,6 +35,8 @@ function updateStyles() {
                 for (let j = 0; j < header.children.item(i).children.item(0).children.length; j++) {
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.color = 'white';
                     header.children.item(i).children.item(0).children.item(j).children.item(0).style.borderColor = 'white';
+                    styleEl.innerHTML = 'nav a.active::after { border-color: white; filter: blur(5px) }';
+
                 }
             } else if (header.children.item(i).tagName === 'A') {
                 header.children.item(i).children.item(0).style.color = 'white';
