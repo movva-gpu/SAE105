@@ -1,77 +1,11 @@
-$(window).scroll(function () {
-    updateStyles();
-});
-
-// $(window).load(function() {
-//         updateStyles();
-// });
-
-$(window).resize(function () {
-    updateStyles();
-});
-
-function updateStyles() {
-    let scrollY = window.scrollY;
-    let header = window.document.querySelector('header');
-    let styleEl = document.head.appendChild(document.createElement('style'));
-    if (scrollY == 0) {
-        header.style.backgroundColor = 'white';
-        for (let i = 0; i < header.children.length; i++) {
-            if (header.children.item(i).tagName === 'NAV') {
-                for (
-                    let j = 0;
-                    j < header.children.item(i).children.item(0).children.length;
-                    j++
-                ) {
-                    header.children
-                        .item(i)
-                        .children.item(0)
-                        .children.item(j)
-                        .children.item(0).style.color = 'black';
-                    header.children
-                        .item(i)
-                        .children.item(0)
-                        .children.item(j)
-                        .children.item(0).style.borderColor = 'black';
-                    styleEl.innerHTML =
-                        'nav a.active::after { border-color: transparent; filter: none }';
-                }
-            } else if (header.children.item(i).tagName === 'A') {
-                header.children.item(i).children.item(0).style.color = 'black';
-            }
-            header.children.item(i).style.color = 'black';
-        }
-    } else {
-        header.style.backgroundColor = '#00000085';
-        for (let i = 0; i < header.children.length; i++) {
-            if (header.children.item(i).tagName === 'NAV') {
-                for (
-                    let j = 0;
-                    j < header.children.item(i).children.item(0).children.length;
-                    j++
-                ) {
-                    header.children
-                        .item(i)
-                        .children.item(0)
-                        .children.item(j)
-                        .children.item(0).style.color = 'white';
-                    header.children
-                        .item(i)
-                        .children.item(0)
-                        .children.item(j)
-                        .children.item(0).style.borderColor = 'white';
-                    styleEl.innerHTML =
-                        'nav a.active::after { border-color: white; filter: blur(5px) }';
-                }
-            } else if (header.children.item(i).tagName === 'A') {
-                header.children.item(i).children.item(0).style.color = 'white';
-            }
-            header.children.item(i).style.color = 'white';
-        }
-    }
-}
-
 $(document).ready(function () {
+    $(window).on({
+        'scroll': updateStyles,
+        'resize': updateStyles
+    });
+
+    updateStyles();
+
     $('#datatable').DataTable({
         language: {
             url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json',
@@ -85,4 +19,45 @@ $(document).ready(function () {
         scrollY: '60svh',
         paging: false,
     });
+
+    function updateStyles() {
+        let scrollY = window.scrollY;
+        let header = $('header');
+        let navLinks = $('nav a');
+        let RTD = $('header h2')
+        
+        if (scrollY == 0) {
+            header.css({
+                'backgroundColor': 'white',
+                'color': 'black'
+            });
+
+            navLinks.css({
+                'color': 'black',
+                'borderColor': 'black'
+            });
+
+            RTD.css({
+                color: 'black'
+            });
+
+            $('nav a.active').toggleClass('changed', false);
+        } else {
+            header.css({
+                'backgroundColor': '#00000085',
+                'color': 'white'
+            });
+
+            navLinks.css({
+                'color': 'white',
+                'borderColor': 'white'
+            });
+
+            RTD.css({
+                color: 'white'
+            });
+
+            $('nav a.active').toggleClass('changed', true);
+        }
+    }
 });

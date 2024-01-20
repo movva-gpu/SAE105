@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/utils.php' ?>
 <!-- <?php
         // require __DIR__.'/vendor/autoload.php';
 
@@ -26,24 +27,12 @@
 
         ?> -->
 <!DOCTYPE html>
-<html lang='zxx'>
+<html lang='fr'>
 
-<head>
-    <title>Contact</title>
-
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name='description' content='Une page de fan page de Russell T Davies'>
-    <meta name='author' content='Danyella Strikann'>
-    <meta name='keywords' content='Russell T Davies, Doctor Who, BBC, Fan Page, RTD, RT Davies, R.T.D.'>
-    <meta name='robots' content='index, follow'>
-    
-    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-</head>
+<head><?= headGenerator('Contact', 'Me contacter', 'Contact', 'noindex, nofollow'); ?></head>
 
 <body>
-    <?php require_once('components/header.php'); ?>
+    <?= requireHeader(); ?>
     <main>
         <article>
             <h1>Contact</h1>
@@ -68,12 +57,12 @@
                 <br>
                 <label for='message'>Message</label>
                 <textarea name='message' id='message' placeholder='Un magnifique message' required></textarea>
-                
+
                 <button type='submit' name='submit'>Envoyer</button>
             </form>
         </article>
     </main>
-    <?php require_once('components/footer.php'); ?>
+    <?= requireFooter(); ?>
 
     <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
     <script src='js/main.js'></script>
