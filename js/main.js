@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(window).on({
-        'scroll': updateStyles,
-        'resize': updateStyles
+        scroll: updateStyles,
+        resize: updateStyles,
     });
 
     updateStyles();
@@ -24,37 +24,37 @@ $(document).ready(function () {
         let scrollY = window.scrollY;
         let header = $('header');
         let navLinks = $('nav a');
-        let RTD = $('header h2')
-        
+        let RTD = $('header h2');
+
         if (scrollY == 0) {
             header.css({
-                'backgroundColor': 'white',
-                'color': 'black'
+                backgroundColor: 'white',
+                color: 'black',
             });
 
             navLinks.css({
-                'color': 'black',
-                'borderColor': 'black'
+                color: 'black',
+                borderColor: 'black',
             });
 
             RTD.css({
-                color: 'black'
+                color: 'black',
             });
 
             $('nav a.active').toggleClass('changed', false);
         } else {
             header.css({
-                'backgroundColor': '#00000085',
-                'color': 'white'
+                backgroundColor: '#00000085',
+                color: 'white',
             });
 
             navLinks.css({
-                'color': 'white',
-                'borderColor': 'white'
+                color: 'white',
+                borderColor: 'white',
             });
 
             RTD.css({
-                color: 'white'
+                color: 'white',
             });
 
             $('nav a.active').toggleClass('changed', true);

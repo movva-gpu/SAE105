@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
     background-image: url('../images/background.avif');
     background-size: cover;
     position: relative;
@@ -127,7 +128,7 @@ nav a.active.changed::after {
     height: 100%;
     border: solid 2pt white;
     border-radius: 0.5em;
-    filter: blur(5px)
+    filter: blur(5px);
 }
 
 main {
@@ -324,8 +325,9 @@ button {
 
 input {
     height: 2lh !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif !important;
     font-size: 0.9rem !important;
 }
 
@@ -337,8 +339,9 @@ textarea {
 }
 
 button {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
     font-size: 0.9rem;
     width: 7em;
     align-self: flex-end;
