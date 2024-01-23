@@ -1,14 +1,14 @@
-<?php require_once __DIR__ . '/utils.php' ?>
+<?php require_once 'utils.php' ?>
 <!DOCTYPE html>
 <html lang='fr'>
 
 <head>
     <link rel='stylesheet' href='https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css'>
-    <?= headGenerator('Données', 'Les épisodes de R.T.D.', 'Données,Episodes,Saisons', 'noindex, nofollow'); ?>
+    <?php echo headGenerator('Données', 'Les épisodes de R.T.D.', 'Données,Episodes,Saisons', 'noindex, nofollow'); ?>
 </head>
 
 <body>
-    <?= requireHeader(); ?>
+    <?php require_once 'components/header.php'; ?>
     <main>
         <section>
             <h1>Données - Episodes de R.T.D.</h1>
@@ -62,7 +62,7 @@
             <p class="help" title='Dans le cadre de la SAE, certains épisodes rédigé par Chris Chibnall ont été inclus.'>Certains des épisodes ne sont pas réellement écrits par Russell T Davis et certaines dates peuvent être légèrement décalées</p>
         </section>
     </main>
-    <?= requireFooter(); ?>
+    <?php require_once 'components/footer.php'; ?>
 
     <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
 

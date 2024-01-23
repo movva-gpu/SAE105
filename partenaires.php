@@ -5,7 +5,7 @@
 <head><?= headGenerator('Partenaires', 'Nos partenaires', 'Partenaires', 'noindex, nofollow'); ?></head>
 
 <body>
-    <?= requireHeader(); ?>
+    <?php require_once 'components/header.php'; ?>
     <main>
         <section>
             <h1>Partenaires</h1>
@@ -18,7 +18,7 @@
                 Sequi ratione impedit asperiores maiores, tenetur non totam et harum soluta quaerat quia similique quis quo iusto. At animi repellendus aliquam cupiditate provident. Tempora ad unde, labore facilis corporis molestiae.</p>
         </section>
     </main>
-    <?= requireFooter(); ?>
+    <?php require_once 'components/footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src='js/main.js'></script>

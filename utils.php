@@ -1,15 +1,5 @@
 <?php
 
-/** requireHeader - Echo the header */
-function requireHeader(): void
-{
-    echo require_once('components/header.php');
-}
-/** requireFooter - Echo the footer */
-function requireFooter(): void
-{
-    echo require_once('components/footer.php');
-}
 /**
  * headGenerator - Echo HTML head section for a webpage with meta tags, title, and stylesheet link.
  *
@@ -20,9 +10,9 @@ function requireFooter(): void
  *
  * @return string - The generated HTML head section.
  */
-function headGenerator($title, $description, $additional_keywords, $robots = "index, follow"): void
+function headGenerator($title, $description, $additional_keywords, $robots = "index, follow"): string
 {
-    echo '<title>' . $title . '</title>' . "\n" .
+    return '<title>' . $title . '</title>' . "\n" .
         '<meta charset="UTF-8">' .
         '<meta http-equiv="X-UA-Compatible content="IE=edge"' . "\n" .
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n" .

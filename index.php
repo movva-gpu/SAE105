@@ -5,14 +5,14 @@
 <head><?= headGenerator('Russell T Davies - Fan Page', 'Une fan page de Russell T Davies', 'Accueil'); ?></head>
 
 <body>
-    <?= requireHeader(); ?>
+    <?php require_once 'components/header.php'; ?>
     <main>
         <section>
             <h1>Russell T Davies</h1>
             <h2>Un show-runner Doctor Who</h2>
-            <img src='images/rtd.jpg' alt='Photo of Russel T Davies'>
-            <img class='dw' src='images/dw-cropped.png' alt='Logo de Doctor Who (2023)'>
-            <img class='bbc' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/240px-BBC_Logo_2021.svg.png' alt='Le logo de la BBC'>
+            <img src='images/rtd.avif' alt='Photo of Russel T Davies'>
+            <img class='dw' src='images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
+            <img class='bbc' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/240px-BBC_Logo_2021.svg.avif' alt='Le logo de la BBC'>
             <p>
                 Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de télévision
                 et un écrivain gallois. Il est principalement connu pour être un pionnier de l'écriture de séries telles que
@@ -22,7 +22,7 @@
             </p>
         </section>
     </main>
-    <?= requireFooter(); ?>
+    <?php require_once 'components/footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src='js/main.js'></script>

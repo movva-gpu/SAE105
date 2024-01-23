@@ -5,7 +5,7 @@
 <head><?= headGenerator('Galerie', 'La gallerie des saisons de RTD', 'Galerie'); ?></head>
 
 <body>
-    <?= requireHeader(); ?>
+    <?php require_once 'components/header.php'; ?>
     <main>
         <section>
             <h1>Galerie</h1>
@@ -18,15 +18,13 @@
                     $file_name = explode('.', $file)[0];
                     echo '<img height=380 src=' . $gallery_path . $file .
                         ' alt="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') .
-                        '" title="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') . '"' .
-                        ' style="background-image: url(\'' . $gallery_path . 'lowres/' . $file . '\'); ' .
-                        'background-size: cover">';
+                        '" title="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') . '">';
                 }
                 ?>
             </div>
         </section>
     </main>
-    <?= requireFooter(); ?>
+    <?php require_once 'components/footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src='js/main.js'></script>
