@@ -18,7 +18,7 @@ if ($_POST['first-name']) {
     $headers    = 'From: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
     $sent = mail($to, $subject, $message, $headers);
-    if ($_POST['email'] && $sent) {
+    if ($_POST['email']) {
         $confirmHeaders    = 'From: noreply@mmi12f13.sae105.ovh' . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
         mail($from, 'Message envoyé', 'Nous avons bien reçu votre message, merci de nous contacter.' . "\r\n" . 'Cordialement' . "\r\n" . 'L\'équipe de New Who', $confirmHeaders);
     }
