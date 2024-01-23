@@ -1,31 +1,35 @@
-<?php require_once __DIR__ . '/utils.php' ?>
-<!-- <?php
-        // require __DIR__.'/vendor/autoload.php';
+<?php
+require_once 'utils.php';
+// require __DIR__.'/vendor/autoload.php';
 
-        // use PHPMailer\PHPMailer\PHPMailer;
-        // use PHPMailer\PHPMailer\SMTP;
-        // use PHPMailer\PHPMailer\Exception;
-        error_reporting(0);
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
+error_reporting(0);
 
-        if ($_POST['first-name']) {
-            $first_name     = $_POST['first-name'];
-            $name           = $_POST['name'];
-            $from           = $_POST['email'] ? $_POST['email'] : 'anonymous@xyz';
-            $subject        = $_POST['subject'];
-            $message        = $_POST['message'];
+if ($_POST['first-name']) {
+    $first_name     = $_POST['first-name'];
+    $name           = $_POST['name'];
+    $from           = $_POST['email'] ? $_POST['email'] : 'anonymous@xyz';
+    $subject        = $_POST['subject'];
+    $message        = $_POST['message'];
 
-            $to = file_get_contents('config/email');
-            $headers    = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    $to = file_get_contents('config/email');
+    $headers    = 'From: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
-            $sent = mail($to, $subject, $message, $headers);
+    $sent = mail($to, $subject, $message, $headers);
+    if ($_POST['email'] && $sent) {
+        $confirmHeaders    = 'From: noreply@mmi12f13.sae105.ovh' . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+        mail($from, 'Message envoyé', 'Nous avons bien reçu votre message, merci de nous contacter.' . "\r\n" . 'Cordialement' . "\r\n" . 'L\'équipe de New Who', $confirmHeaders);
+    }
 
-            $post = true;
+    $post = true;
 
 
-            // $mail = new PHPMailer(true);
-        }
+    // $mail = new PHPMailer(true);
+}
 
-        ?> -->
+?>
 <!DOCTYPE html>
 <html lang='fr'>
 
