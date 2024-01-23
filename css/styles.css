@@ -3,8 +3,9 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif;
-    background-image: url('../images/background.avif');
+    background-image: url(../images/background.avif);
     background-size: cover;
+    background-position: center;
     position: relative;
     min-height: calc(100svh - 7.5em * 2);
     padding: 7.5em 0;
@@ -57,6 +58,8 @@ header {
     overflow: hidden;
     transition: background-color 0.33s ease-out;
     z-index: 999;
+    margin-inline: auto;
+    min-height: 3em;
 }
 
 header h2 {
@@ -66,7 +69,7 @@ header h2 {
 }
 
 nav {
-    width: 50%;
+    width: 1080px;
 }
 
 nav ul {
@@ -144,22 +147,21 @@ main h6 {
     text-align: center;
 }
 
-article {
+section {
     position: relative;
     font-size: 1.05rem;
     margin: auto;
     border-radius: 2em;
     background: white;
     box-shadow: 0 0 90px #fff;
-    padding: 4em 4lh;
-    max-width: fit-content;
+    padding: 4em;
 }
 
-article img {
+section img {
     display: block;
     margin: auto;
     border-radius: 1.25em;
-    margin-bottom: 1.1lh;
+    margin-bottom: 1.1em;
     height: 25em;
     box-shadow: #00000055 0 -5px 50px;
 }
@@ -168,8 +170,8 @@ img.dw {
     box-shadow: none;
     position: absolute;
     height: 15%;
-    top: 1lh;
-    left: 1lh;
+    top: 1em;
+    left: 1em;
 }
 
 img.bbc {
@@ -177,28 +179,32 @@ img.bbc {
     position: absolute;
     height: auto;
     width: 15%;
-    top: 1lh;
-    right: 1lh;
+    top: 1em;
+    right: 1em;
     border-radius: 0 0.6em 0 0;
 }
 
-article h1 {
-    margin: 0 1em 0.5lh 1em;
+section {
+    width: 1080px;
+}
+
+section h1 {
+    margin: 0 1em 0.5em 1em;
     font-size: 2.8em;
 }
 
-article h2 {
-    margin-bottom: 1lh;
+section h2 {
+    margin-bottom: 1em;
 }
 
-article p {
+section p {
     display: block;
     margin: auto;
-    max-width: 67ch;
+    /* max-width: 67ch; */
 }
 
 #datatable_wrapper {
-    margin-block: 2lh !important;
+    margin-block: 2em !important;
 }
 
 tbody td,
@@ -238,7 +244,7 @@ footer p {
     display: block;
     margin: 0;
     padding-block: 2ch;
-    padding-inline: 2lh;
+    padding-inline: 2em;
     max-width: 67ch;
     border-radius: 2em 2em 0 0;
     background: white;
@@ -263,8 +269,9 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 67ch;
-    gap: 1lh;
+    margin-inline: auto;
+    width: 1080px;
+    gap: 1em;
 }
 
 #author {
@@ -290,7 +297,7 @@ form {
     background-color: var(--_back);
     border-radius: 0.75em;
     color: var(--_color);
-    padding: 1lh 1em;
+    padding: 1em;
     font-weight: bolder;
 }
 
@@ -318,13 +325,13 @@ textarea {
 input,
 textarea,
 button {
-    padding: 0.25lh 1em !important;
+    padding: 0.25em 1em !important;
     border: solid black 2pt !important;
     border-radius: 0.75em !important;
 }
 
 input {
-    height: 2lh !important;
+    height: 2em !important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif !important;
@@ -333,9 +340,8 @@ input {
 
 #subject,
 textarea {
-    max-width: calc(100% - 2 * 2pt - 2 * 1em);
-    min-width: calc(100% - 2 * 2pt - 2 * 1em);
-    min-height: calc(1lh + 0.25lh);
+    resize: vertical;
+    min-height: 1.25em;
 }
 
 button {
@@ -350,15 +356,13 @@ button {
     color: white;
     font-weight: bolder;
     text-align: center;
+    transition: all ease-out .33s;
 }
 
 button:hover {
-    transform: translate(-5px -5px) scale(105%);
-    box-shadow: #000;
-}
-
-article:has(#gallery) {
-    max-width: 75%;
+    scale: 110%;
+    translate: -5px -5px;
+    box-shadow: 5px 5px 10px #00000055;
 }
 
 #gallery {

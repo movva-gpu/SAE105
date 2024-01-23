@@ -34,7 +34,7 @@
 <body>
     <?= requireHeader(); ?>
     <main>
-        <article>
+        <section>
             <h1>Contact</h1>
             <!-- <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>';
                     if (!$sent && $post) echo '<p class=error>Something went wrong</p><br>' ?> -->
@@ -60,7 +60,7 @@
 
                 <button type='submit' name='submit'>Envoyer</button>
             </form>
-        </article>
+        </section>
     </main>
     <?= requireFooter(); ?>
 

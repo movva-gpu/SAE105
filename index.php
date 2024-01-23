@@ -7,7 +7,7 @@
 <body>
     <?= requireHeader(); ?>
     <main>
-        <article>
+        <section>
             <h1>Russell T Davies</h1>
             <h2>Un show-runner Doctor Who</h2>
             <img src='images/rtd.jpg' alt='Photo of Russel T Davies'>
@@ -20,7 +20,7 @@
                 séries télévisées de science-fiction, Doctor Who, dont il a notamment créé les séries dérivées
                 Torchwood et The Sarah Jane Adventures.
             </p>
-        </article>
+        </section>
     </main>
     <?= requireFooter(); ?>
 

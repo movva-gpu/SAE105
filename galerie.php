@@ -7,7 +7,7 @@
 <body>
     <?= requireHeader(); ?>
     <main>
-        <article>
+        <section>
             <h1>Galerie</h1>
             <div id='gallery'>
                 <?php
@@ -24,7 +24,7 @@
                 }
                 ?>
             </div>
-        </article>
+        </section>
     </main>
     <?= requireFooter(); ?>
 

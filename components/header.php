@@ -5,7 +5,7 @@ $is_donnees_active = false;
 $is_partenaires_active = false;
 $is_contact_active = false;
 
-$url = $_SERVER['REQUEST_URI'];
+$url = $_SERVER['PHP_SELF'];
 $url = explode('/', $url);
 $url = $url[count($url) - 1];
 
