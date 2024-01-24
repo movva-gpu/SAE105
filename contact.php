@@ -47,7 +47,7 @@ if ($_POST['first-name']) {
             <?php if ($sent && $post) echo '<p class=success>Message sent</p><br>';
             if (!$sent && $post) echo '<p class=error>Something went wrong</p><br>' ?>
             <!-- <p class='warning'>W.I.P.</p><br> -->
-            <form method='post' action='contact.php'>
+            <form method='post' action='traitements/envoi_mail.php'>
                 <div id='author'>
                     <div id='label'>
                         <label for='first-name'>Prénom : <span title="Champ obligatoire" class="help">*</span></label>

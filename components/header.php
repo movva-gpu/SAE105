@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(0);
+
 $is_index_active = false;
 $is_galerie_active = false;
 $is_donnees_active = false;
