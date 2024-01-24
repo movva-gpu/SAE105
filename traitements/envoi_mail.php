@@ -1,7 +1,12 @@
 <?php
 
 if (count($_POST) == 0) { header('location: ../contact.php?error=empty'); die; }
-if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) header('location:../contact.php?error=email');
+if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) { header('location:../contact.php?error=email'); die; }
+
+if (empty($_POST['name'])) { header('location:../contact.php?error=empty-name'); die; }
+if (empty($_POST['first-name'])) { header('location:../contact.php?error=empty-first-name'); die; }
+if (empty($_POST['email'])) { header('location:../contact.php?error=empty-email'); die; }
+if (empty($_POST['message'])) { header('location:../contact.php?error=empty-message'); die; }
 
 $name = mb_strtolower($_POST['name']);
 $firstName = mb_strtolower($_POST['first-name']);
@@ -18,4 +23,7 @@ $headers = 'From:' . $email . "\r\n" . 'Reply-to:' . $email . "\r\n" .  'X-Maile
 $dest = file_get_contents('../config/email');
 
 if (!mail($dest, $subject, $message, $headers)) { header('location: ../contact.php?error=not-sent'); die; }
-header('location: ../contact.php?error=none');
+
+$headers = 'From:' . $dest . "\r\n" . 'Reply-to:' . 'noreply@mmi-troyes.fr' . "\r\n" .  'X-Mailer:PHP/' . phpversion();
+
+if (mail($email, $subject, $firstName . "\r\n" . 'Votre demande de contact auprès de New Who a été enregistré.', $headers)) { header('location: ../contact.php?error=none'); die; }
