@@ -34,11 +34,16 @@ switch ($url) {
         break;
 }
 
-if ($is_index_active) $index_class = 'active';
-if ($is_galerie_active) $galerie_class = 'active';
-if ($is_donnees_active) $donnees_class = 'active';
-if ($is_partenaires_active) $partenaires_class = 'active';
-if ($is_contact_active) $contact_class = 'active';
+if ($is_index_active)
+    $index_class = 'active';
+if ($is_galerie_active)
+    $galerie_class = 'active';
+if ($is_donnees_active)
+    $donnees_class = 'active';
+if ($is_partenaires_active)
+    $partenaires_class = 'active';
+if ($is_contact_active)
+    $contact_class = 'active';
 ?>
 
 <header>

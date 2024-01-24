@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang='fr'>
 
-<head><?= headGenerator('Russell T Davies - Fan Page', 'Une fan page de Russell T Davies', 'Accueil'); ?></head>
+<head>
+    <?= headGenerator('Russell T Davies - Fan Page', 'Une fan page de Russell T Davies', 'Accueil'); ?>
+</head>
 
 <body>
     <?php require_once 'components/header.php'; ?>
@@ -14,8 +16,10 @@
             <img class='dw' src='images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
             <img class='bbc' src='images/bbc.avif' alt='Le logo de la BBC'>
             <p>
-                Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de télévision
-                et un écrivain gallois. Il est principalement connu pour être un pionnier de l'écriture de séries telles que
+                Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de
+                télévision
+                et un écrivain gallois. Il est principalement connu pour être un pionnier de l'écriture de séries telles
+                que
                 Queer as Folk et The Second Coming, et pour être à l'origine du renouveau d'une des plus anciennes
                 séries télévisées de science-fiction, Doctor Who, dont il a notamment créé les séries dérivées
                 Torchwood et The Sarah Jane Adventures.
