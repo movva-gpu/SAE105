@@ -26,4 +26,4 @@ if (!mail($dest, $subject, $message, $headers)) { header('location: ../contact.p
 
 $headers = 'From:' . $dest . "\r\n" . 'Reply-to:' . 'noreply@mmi-troyes.fr' . "\r\n" .  'X-Mailer:PHP/' . phpversion();
 
-if (mail($email, $subject, $firstName . "\r\n" . 'Votre demande de contact auprès de New Who a été enregistré.', $headers)) { header('location: ../contact.php?error=none'); die; }
+if (mail($email, 'Confirmation', $firstName . ",\r\n" . 'votre demande de contact auprès de New Who a été enregistré.', $headers)) { header('location: ../contact.php?error=none'); die; }
