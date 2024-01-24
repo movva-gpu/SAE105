@@ -12,9 +12,9 @@ $image_metadata['file_type'] = $_FILES['image']['type'];
 $image_metadata['file_size'] = $_FILES['image']['size'];
 $image_metadata['tmp_file'] = $_FILES['image']['tmp_name'];
 
-$error = $_FILES['image']['error'];
+$image_error = $_FILES['image']['error'];
 
-if ($error != 0) {
+if ($image_error != 0) {
     array_push($error, 'file_error');
     die;
 }
@@ -29,3 +29,4 @@ if (exif_imagetype($image_metadata['tmp_file']) != IMAGETYPE_AVIF ||
 
 echo $image_metadata['file_size'];
 echo $image_metadata;
+echo $error;
