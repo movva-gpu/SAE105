@@ -28,5 +28,9 @@ if (exif_imagetype($image_metadata['tmp_file']) != IMAGETYPE_AVIF ||
         array_push($error, 'file_type');
 
 echo $image_metadata['file_size'];
-echo $image_metadata;
-echo $error;
+foreach ($image_metadata as $key => $value) {
+    echo $key . ': ' . $value;
+}
+foreach ($error as $key => $value) {
+    echo $key . ': ' . $value;
+}
