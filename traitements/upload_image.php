@@ -28,3 +28,4 @@ if (exif_imagetype($image_metadata['tmp_file']) != IMAGETYPE_AVIF ||
         array_push($error, 'file_type');
 
 echo $image_metadata['file_size'];
+echo $image_metadata;
