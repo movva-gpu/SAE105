@@ -147,6 +147,10 @@ main h6 {
     text-align: center;
 }
 
+main section:not(:is(:first-child)) {
+    margin-top: 2em;
+}
+
 section {
     position: relative;
     font-size: 1.05rem;
