@@ -303,6 +303,7 @@ form .help {
     border-radius: 0.75em;
     color: var(--_color);
     padding: 1em;
+    margin-bottom: 1em;
     font-weight: bolder;
 }
 
