@@ -65,7 +65,10 @@ header h2 {
 }
 
 nav {
+    display: flex;
+    align-items: center;
     width: 1080px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -148,6 +151,7 @@ main section:not(:is(:first-child)) {
 }
 
 section {
+    max-width: calc(1080px - 8em);
     position: relative;
     font-size: 1.05rem;
     margin: auto;
@@ -244,8 +248,7 @@ footer p {
     display: block;
     margin: 0;
     padding-block: 2ch;
-    padding-inline: 2em;
-    max-width: 67ch;
+    width: 1080px;
     border-radius: 2em 2em 0 0;
     background: white;
     box-shadow: 0 0 90px #fff;
@@ -270,7 +273,7 @@ form {
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
-    width: 1080px;
+    width: 100%;
     gap: 1em;
 }
 

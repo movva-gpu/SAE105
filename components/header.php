@@ -47,9 +47,9 @@ if ($is_contact_active)
 
 <header>
     <a href='.' title='Accueil' class='no-decoration '>
-        <h2>R.T.D.</h2>
-    </a>
+        </a>
     <nav>
+        <h2>R.T.D.</h2>
         <ul>
             <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>
             <li><a class='<?= $galerie_class ?>' href='galerie.php' title='Galerie'>Galerie</a></li>
