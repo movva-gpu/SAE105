@@ -15,10 +15,9 @@ if ($errors != []) {
     echo "Error(s) found: ";
     $errors_str = '';
     for ($i = 0; $i < count($errors); $i++) {
-        echo $errors[$i] . ", ";
+        echo $errors[$i]. ',';
         $errors_str .= $errors[$i] . ',';
     }
-    echo $errors_str;
     // header('Location: ../contact.php?errors=' . $errors_str);
     die;
 }
