@@ -18,6 +18,9 @@ if (empty($_POST['name'])) {
 if (!empty($errors)) {
     echo "Error(s) found: ";
     $errors_str = '';
+    foreach ($errors as $error) {
+        echo $error . ', ';
+    }
     for ($i = 0; $i < count($error); $i++) {
         echo $errors[$i] . ", ";
         $errors_str .= $errors[$i] . ',';
