@@ -6,3 +6,5 @@ jsconfig.json
 
 vendor/
 composer.lock
+
+upload_*
