@@ -5,10 +5,8 @@ echo "Checking for empty form data...";
 if (count($_POST) == 0) array_push($errors, 'empty');
 
 echo "Checking for valid email address...";
-if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) array_push($errors, 'email');
-
-echo count(explode('.', explode('@', $_POST['email'])[1])) < 2 ? '<br>A<br' : '<br>B<br>';
-if (count(explode('@', $_POST['email'])) < 2 || count(explode('.', explode('@', $_POST['email'])[1])) < 2) array_push($errors, 'email');
+if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == false) array_push($errors, 'email');
+if (count(explode('.', explode('@', $_POST['email'])[1])) < 2) array_push($errors, 'email');
 
 echo "Checking for empty name...";
 if (empty($_POST['name'])) array_push($errors, 'empty');
