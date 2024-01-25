@@ -3,16 +3,16 @@ $errors = [];
 
 if (count($_POST) == 0) {
     echo "Checking for empty form data...";
-    array_push($errors, 'empty');
+    $errors = array_push($errors, 'empty');
 }
 echo "Checking for valid email address...";
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    array_push($errors, 'email');
+    $errors = array_push($errors, 'email');
 }
 
 if (empty($_POST['name'])) {
     echo "Checking for empty name...";
-    array_push($errors, 'empty');
+    $errors = array_push($errors, 'empty');
 }
 
 if (!empty($errors)) {
