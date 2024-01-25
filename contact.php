@@ -19,6 +19,7 @@ error_reporting(0);
             if (!empty($_GET['errors'])) {
                 $errors = explode(',', $_GET['errors']);
                 if ($_GET['errors'] != 'none') {
+                    if (count($errors) > 1) array_slice($errors, 0, count($errors) - 1);
                     $new_array = [];
                     foreach ($errors as $error) {
                         if (!in_array($error, $new_array)) {
