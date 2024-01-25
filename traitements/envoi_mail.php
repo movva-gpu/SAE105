@@ -18,6 +18,7 @@ if ($errors != []) {
         echo $errors[$i] . ", ";
         $errors_str .= $errors[$i] . ',';
     }
+    echo $errors_str;
     // header('Location: ../contact.php?errors=' . $errors_str);
     die;
 }
