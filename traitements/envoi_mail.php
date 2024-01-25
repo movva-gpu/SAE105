@@ -1,5 +1,5 @@
 <?php
-$errors = [];
+$errors = ['email'];
 
 echo "Checking for empty form data...";
 if (count($_POST) == 0) array_push($errors, 'empty');
