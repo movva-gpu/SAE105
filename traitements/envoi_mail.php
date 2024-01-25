@@ -1,26 +1,18 @@
 <?php
 $errors = [];
 
-if (count($_POST) == 0) {
-    echo "Checking for empty form data...";
-    $errors = array_push($errors, 'empty');
-}
+echo "Checking for empty form data...";
+if (count($_POST) == 0) array_push($errors, 'empty');
+
 echo "Checking for valid email address...";
-if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $errors = array_push($errors, 'email');
-}
+if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) array_push($errors, 'email');
 
-if (empty($_POST['name'])) {
-    echo "Checking for empty name...";
-    $errors = array_push($errors, 'empty');
-}
+echo "Checking for empty name...";
+if (empty($_POST['name'])) array_push($errors, 'empty');
 
-if (!empty($errors)) {
+if ($errors == []) {
     echo "Error(s) found: ";
     $errors_str = '';
-    foreach ($errors as $error) {
-        echo $error . ', ';
-    }
     for ($i = 0; $i < count($error); $i++) {
         echo $errors[$i] . ", ";
         $errors_str .= $errors[$i] . ',';
