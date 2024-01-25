@@ -7,7 +7,7 @@ if (count($_POST) == 0) array_push($errors, 'empty');
 echo "Checking for valid email address...";
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) array_push($errors, 'email');
 
-echo count(explode('@', $_POST['email'])) . ', ' . count(explode('.', explode('@', $_POST['email'])[1]));
+echo count(explode('.', explode('@', $_POST['email'])[1])) < 2 ? '<br>A<br' : '<br>B<br>';
 if (count(explode('@', $_POST['email'])) < 2 || count(explode('.', explode('@', $_POST['email'])[1])) < 2) array_push($errors, 'email');
 
 echo "Checking for empty name...";
@@ -54,8 +54,9 @@ echo "Preparing confirmation email headers...";
 $headers = 'From:' . $dest . "\r\n" . 'Reply-to:' . 'noreply@mmi-troyes.fr' . "\r\n" . 'X-Mailer:PHP/' . phpversion();
 
 echo "Sending confirmation email...";
-if (mail($email, 'Confirmation', ucfirst($firstName) . ",\r\n" . 'votre demande de contact auprès de New Who a été enregistré.', $headers)) {
-    // header('location: ../contact.php?errors=none');
+if (!mail($email, 'Confirmation', ucfirst($firstName) . ",\r\n" . 'votre demande de contact auprès de New Who a été enregistré.', $headers)) {
+    // header('location: ../contact.php?errors=something-wrong');
     die;
 }
+// header('location: ../contact.php?errors=none');
 ?>
