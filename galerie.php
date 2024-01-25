@@ -16,7 +16,7 @@
                 $gallery_path = 'images/galerie/';
                 $gallery_folder = opendir($gallery_path);
                 while (($file = readdir($gallery_folder)) !== false) {
-                    if ($file == '.' || $file == '..' || $file == 'alt' || $file == 'lowres')
+                    if ($file == '.' || $file == '..' || $file == 'alt')
                         continue;
                     $file_name = explode('.', $file)[0];
                     echo '<img height=380 src=' . $gallery_path . $file .
@@ -27,15 +27,61 @@
             </div>
         </section>
         <section id='upload'>
+            <?php
+            if (!empty($_GET['errors'])) {
+                $errors = explode(',', $_GET['errors']);
+                if ($_GET['errors'] != 'none') {
+                    $errors = array_slice($errors, 0, count($errors) - 1);
+                    $new_array = [];
+                    foreach ($errors as $error) {
+                        if (!in_array($error, $new_array)) {
+                            $new_array[] = $error;
+                        }
+                    }
+                    $errors = $new_array;
+                    echo '<p class="error">';
+                    for ($i = 0; $i < count($errors); $i++) {
+                        switch ($errors[$i]) {
+                            case 'empty':
+                                echo 'Vous devez mettre un texte alternatif';
+                                break;
+                            case 'empty_image':
+                                echo 'Vous devez mettre une image';
+                                break;
+                            case 'file_move':
+                            case 'file_error':
+                                echo 'Une erreur est survenue lors du téléchargement de l\'image';
+                                break;
+                            case 'file_type':
+                                echo 'Le type de l\'image n\'est pas supporté';
+                                break;
+                            case 'file_size':
+                                echo 'La taille de l\'image est supérieure à 500 Ko';
+                                break;
+                            default:
+                                echo 'Une erreur inconnue est survenue';
+                                break;
+                        }
+                        if ($i != count($errors) - 1 ) { echo ',<br>'; continue; }
+                        echo '.';
+                    }
+                    echo '</p>';
+                } else {
+                    echo '<p class="success">Image transférée avec succès !</p>';
+                }
+            }
+            ?>
             <h1>Ajouter une image</h1>
             <form action='traitements/upload_image.php' method='post' enctype='multipart/form-data'>
                 <label for='alt'>Text alternatif : <span title="Champ obligatoire" class="help">*</span></label>
                 <input type='text' name='alt' id='alt' placeholder='Le 13ème docteur' required>
                 <label for='title'>Image en format <a href='https://github.com/AOMediaCodec/av1-avif'
-                        title='En apprendre plus sur le format AV1'>.avif</a> ou <a
+                        title='En apprendre plus sur le format AV1'
+                        target='_blank'>.avif</a> ou <a
                         href='https://developers.google.com/speed/webp?hl=fr'
-                        title='EN apprendre plus sur le WebP'>.webp</a>: <span title="Champ obligatoire"
-                        class="help">*</span></label>
+                        title='EN apprendre plus sur le WebP'
+                        target='_blank'>.webp</a> : <span title="Champ obligatoire"
+                        class='help'>*</span></label>
                 <input type='file' name='image' required accept='image/avif, image/webp'>
                 <button type='submit'>
                     <svg id="before" xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,7 @@
 <footer>
     <p>
         Sous license <a rel='nofollow' href='LICENSE' title='La license du projet'>MIT</a> • Site créé par <a rel='me nofollow' href='https://piaille.fr/@danyella_strikann' title='Mon profil Mastodon'>Danyella Strikann</a> •
-        <a href='../reference.php?url=<?= $_SERVER['PHP_SELF'] ?>'>Crédits</a> •
+        <?php echo '<a href="../reference.php?url=' . str_contains($_SERVER['PHP_SELF'], 'reference.php') ? $_GET['url'] : $_SERVER['PHP_SELF'] . '">Références</a> • '; ?>
         <a href='https://github.com/movva-gpu/SAE105'>Source</a>
     </p>
 </footer>

@@ -32,10 +32,6 @@ a:not(nav a) {
     text-decoration-skip-ink: none;
 }
 
-a:hover:not(nav a) {
-    text-underline-offset: 0.33em;
-}
-
 a.no-decoration {
     text-decoration: none;
 }
@@ -281,10 +277,6 @@ form {
 form .help {
     text-underline-offset: -0.2em;
     color: red;
-}
-
-form .help:hover {
-    text-underline-offset: -0.2em;
 }
 
 #author {

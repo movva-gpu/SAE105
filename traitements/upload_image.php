@@ -1,11 +1,11 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(0);
 
 $error = [];
 
 if (empty($_FILES))
-    array_push($error, 'empty-image');
+    array_push($error, 'empty_image');
 if (empty($_POST['alt']))
     array_push($error, 'empty');
 
@@ -26,19 +26,18 @@ if ($image_error != 0) {
 if ($image['file_type'] != 'image/avif' &&
     $image['file_type'] != 'image/webp')
         array_push($error, 'file_type');
-
-if (!array_search('file_type', $error) && (exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
-    exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP))
+        
+if (exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP)
         array_push($error, 'file_type');
 
 if ($image['file_size'] > 500_000) array_push($error, 'file_size');
 
 if (!empty($error)) {
-    echo '5.2';
     $errors = '';
     for ($i = 0; $i < count($error); $i++) $errors .= $error[$i] . ',';
     echo $errors;
-    header('Location: ../galerie.php#upload?errors=' . $errors);
+    header('Location: ../galerie.php?errors=' . $errors . '#upload');
     die;
 }
 
@@ -63,9 +62,7 @@ if (!move_uploaded_file($image['tmp_file'], $file_location)) array_push($error, 
 if (!empty($error)) {
     $errors = '';
     for ($i = 0; $i < count($error); $i++) $errors .= $error[$i] . ',';
-    header('Location: ../galerie.php#upload?errors=' . $errors);
+    header('Location: ../galerie.php?errors=' . $errors . '#upload');
 }
 
-echo '10';
-
-header('Location: ../galerie.php#upload?errors=none');
+header('Location: ../galerie.php?errors=none#upload');

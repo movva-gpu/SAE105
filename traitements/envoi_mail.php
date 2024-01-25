@@ -10,6 +10,13 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 if (empty($_POST['name']))
     array_push($errors, 'empty');
 
+if (!empty($errors)) {
+    $errors_str = '';
+    for ($i = 0; $i < count($error); $i++) $errors_str .= $errors[$i] . ',';
+    header('Location: ../contact.php?errors=' . $errors_str);
+    die;
+}
+
 $name = mb_strtolower($_POST['name']);
 $firstName = mb_strtolower($_POST['first-name']);
 
@@ -25,13 +32,13 @@ $headers = 'From:' . $email . "\r\n" . 'Reply-to:' . $email . "\r\n" . 'X-Mailer
 $dest = file_get_contents('../config/email');
 
 if (!mail($dest, $subject, $message, $headers)) {
-    header('location: ../contact.php?error=not-sent');
+    header('location: ../contact.php?errors=not-sent');
     die;
 }
 
 $headers = 'From:' . $dest . "\r\n" . 'Reply-to:' . 'noreply@mmi-troyes.fr' . "\r\n" . 'X-Mailer:PHP/' . phpversion();
 
 if (mail($email, 'Confirmation', ucfirst($firstName) . ",\r\n" . 'votre demande de contact auprès de New Who a été enregistré.', $headers)) {
-    header('location: ../contact.php?error=none');
+    header('location: ../contact.php?errors=none');
     die;
 }

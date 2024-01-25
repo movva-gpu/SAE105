@@ -4,7 +4,4 @@ jsconfig.json
 .vscode/
 .prettierrc
 
-vendor/
-composer.lock
-
 upload_*

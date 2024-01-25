@@ -8,8 +8,7 @@ $is_donnees_active = false;
 $is_partenaires_active = false;
 $is_contact_active = false;
 
-$url = $_SERVER['PHP_SELF'];
-$url = explode('/', $url);
+$url = explode('/', $_SERVER['PHP_SELF']);
 $url = $url[count($url) - 1];
 
 switch ($url) {
