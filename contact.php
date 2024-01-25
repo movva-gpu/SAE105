@@ -20,7 +20,7 @@ error_reporting(0);
                 $errors = explode(',', $_GET['errors']);
                 if ($_GET['errors'] != 'none') {
                     echo count($errors) > 1 ? 'azertyuiop' : 'qsdfghjklm';
-                    if (count($errors) > 1) array_slice($errors, 0, count($errors) - 1);
+                    if (count($errors) > 1) $errors = array_slice($errors, 0, count($errors) - 1);
                     $new_array = [];
                     foreach ($errors as $error) {
                         if (!in_array($error, $new_array)) {
