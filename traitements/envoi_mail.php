@@ -11,7 +11,7 @@ if (count(explode('.', explode('@', $_POST['email'])[1])) < 2) array_push($error
 echo "Checking for empty name...";
 if (empty($_POST['name'])) array_push($errors, 'empty');
 
-if ($errors == []) {
+if ($errors != []) {
     echo "Error(s) found: ";
     $errors_str = '';
     for ($i = 0; $i < count($error); $i++) {
