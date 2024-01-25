@@ -13,6 +13,7 @@ if (empty($_POST['name'])) array_push($errors, 'empty');
 
 if ($errors != []) {
     echo "Error(s) found: ";
+    echo $errors[0];
     $errors_str = '';
     for ($i = 0; $i < count($error); $i++) {
         echo $errors[$i] . ", ";
