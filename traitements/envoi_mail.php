@@ -1,5 +1,5 @@
 <?php
-$errors = ['email'];
+$errors = [];
 
 echo "Checking for empty form data...";
 if (count($_POST) == 0) array_push($errors, 'empty');
@@ -18,7 +18,7 @@ if ($errors != []) {
         echo $errors[$i]. ',';
         $errors_str .= $errors[$i] . ',';
     }
-    // header('Location: ../contact.php?errors=' . $errors_str);
+    header('Location: ../contact.php?errors=' . $errors_str);
     die;
 }
 
@@ -44,7 +44,7 @@ $dest = file_get_contents('../config/email');
 
 echo "Sending email...";
 if (!mail($dest, $subject, $message, $headers)) {
-    // header('location: ../contact.php?errors=not-sent');
+    header('location: ../contact.php?errors=not-sent');
     die;
 }
 
@@ -53,8 +53,8 @@ $headers = 'From:' . $dest . "\r\n" . 'Reply-to:' . 'noreply@mmi-troyes.fr' . "\
 
 echo "Sending confirmation email...";
 if (!mail($email, 'Confirmation', ucfirst($firstName) . ",\r\n" . 'votre demande de contact auprès de New Who a été enregistré.', $headers)) {
-    // header('location: ../contact.php?errors=something-wrong');
+    header('location: ../contact.php?errors=something-wrong');
     die;
 }
-// header('location: ../contact.php?errors=none');
+header('location: ../contact.php?errors=none');
 ?>
