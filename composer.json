@@ -1,0 +1,15 @@
+{
+    "name": "allenyade/sae105",
+    "description": "A school project",
+    "type": "project",
+    "require": {
+        "michelf/php-markdown": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danyella Strikann",
+            "email": "81530181+movva-gpu@users.noreply.github.com"
+        }
+    ]
+}
