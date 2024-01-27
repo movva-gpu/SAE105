@@ -12,7 +12,7 @@ $(document).ready(function () {
     if ($('#video')[0]) {
         var promise = $('#video')[0].play();
 
-        $('#video')[0].on('loadeddata', async function () {
+        $('#video').on('loadeddata', async function () {
             if (promise !== undefined) {
                 await promise
                     .then((_) => {
