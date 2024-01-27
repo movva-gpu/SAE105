@@ -1,4 +1,5 @@
-<?php require_once __DIR__ . '/utils.php'; error_reporting(0); ?>
+<?php require_once __DIR__ . '/utils.php';
+error_reporting(0); ?>
 <!DOCTYPE html>
 <html lang='fr'>
 

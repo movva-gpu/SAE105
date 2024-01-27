@@ -13,20 +13,40 @@ $(document).ready(async function () {
         var promise = $('#video')[0].play();
 
         if (promise !== undefined) {
-            await promise.then(_ => {
-                console.log('Browser supports autoplay.');
-                setTimeout(function () { videoClose(); }, 11_500 - animationDuration);
-            }).catch((err) => {
-                console.log('Error while trying to play video.');
-                unmute();
-                $('#play').css({ display: 'block', animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards' });
-                $('#video').on('play', function () { setTimeout(function () { videoClose(); }, 11_500 - animationDuration); });
-            });
+            await promise
+                .then((_) => {
+                    console.log('Browser supports autoplay.');
+                    setTimeout(function () {
+                        videoClose();
+                    }, 11_500 - animationDuration);
+                })
+                .catch((err) => {
+                    console.log('Error while trying to play video.');
+                    unmute();
+                    $('#play').css({
+                        display: 'block',
+                        animation:
+                            'fadeIn 1s ' +
+                            animationsTimingFunction +
+                            ' forwards',
+                    });
+                    $('#video').on('play', function () {
+                        setTimeout(function () {
+                            videoClose();
+                        }, 11_500 - animationDuration);
+                    });
+                });
         }
-        
-        $('#video').css({ animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards' });
-        $('#unmute').css({ animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards' });
-        $('#close').css({ animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards' });
+
+        $('#video').css({
+            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+        });
+        $('#unmute').css({
+            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+        });
+        $('#close').css({
+            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+        });
     }
 
     if ($('#datatable')[0]) {
@@ -44,7 +64,6 @@ $(document).ready(async function () {
             paging: false,
         });
     }
-    
 });
 
 function updateStyles() {
@@ -89,11 +108,19 @@ function updateStyles() {
 }
 
 function videoClose() {
-    $('#video').css({ animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards' });
-    $('#unmute').css({ animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards' });
-    $('#close').css({ animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards' });
-    $('#play').css({ animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards' });
-    $('#video').animate({ volume: 0}, animationDuration + 750);
+    $('#video').css({
+        animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards',
+    });
+    $('#unmute').css({
+        animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards',
+    });
+    $('#close').css({
+        animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards',
+    });
+    $('#play').css({
+        animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards',
+    });
+    $('#video').animate({ volume: 0 }, animationDuration + 750);
 
     setTimeout(function () {
         $('#video').remove();
@@ -115,8 +142,8 @@ function unmute() {
         return;
     }
     $('#unmute')[0].title = 'Activer le son';
-        $('#video').prop('muted', true);
-        $('#unmute').html(`
+    $('#video').prop('muted', true);
+    $('#unmute').html(`
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 640 640" style="enable-background:new 0 0 640 640;" xml:space="preserve">
             <path d="M334.6,74.2c12.8,5.8,21,18.4,21,32.4v426.7c0,14-8.2,26.7-21,32.4s-27.8,3.4-38.2-5.9L146.4,426.7H71.1C31.9,426.7,0,394.8,0,355.6v-71.1c0-39.2,31.9-71.1,71.1-71.1h75.3L296.3,80.1C306.8,70.8,321.8,68.6,334.6,74.2z M472.2,221.1l61.1,61.1l61.1-61.1c10.4-10.4,27.3-10.4,37.7,0c10.3,10.4,10.4,27.3,0,37.7L571,319.9l61.1,61.1c10.4,10.4,10.4,27.3,0,37.7c-10.4,10.3-27.3,10.4-37.7,0l-61.1-61.1l-61.1,61.1c-10.4,10.4-27.3,10.4-37.7,0c-10.3-10.4-10.4-27.3,0-37.7l61.1-61.1l-61.1-61.1c-10.4-10.4-10.4-27.3,0-37.7C445,210.8,461.9,210.7,472.2,221.1z"/>
         </svg>`);
@@ -125,16 +152,19 @@ function unmute() {
 
 function videoPlay() {
     $('#video')[0].play();
-    $('#play').css({ animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards' });
+    $('#play').css({
+        animation: 'fadeOut 1s ' + animationsTimingFunction + ' forwards',
+    });
 
-    setTimeout(function () { $('#play').remove() }, 1000);
+    setTimeout(function () {
+        $('#play').remove();
+    }, 1000);
 }
 
 function myFunction() {
     fetch('../index.php')
-      .then(response => response.text())
-      .then(data => {
-        // Handle the response from the PHP script
-      });
-  
-  }
+        .then((response) => response.text())
+        .then((data) => {
+            // Handle the response from the PHP script
+        });
+}

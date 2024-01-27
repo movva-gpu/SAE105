@@ -444,7 +444,9 @@ video {
     opacity: 0;
 }
 
-#unmute, #close, #play {
+#unmute,
+#close,
+#play {
     position: fixed;
     background: none;
     border: 0 none;
@@ -474,9 +476,12 @@ video {
     translate: -50% -50%;
 }
 
-#unmute:hover, #unmute:focus,
-#close:hover, #close:focus,
-#play:hover, #play:focus {
+#unmute:hover,
+#unmute:focus,
+#close:hover,
+#close:focus,
+#play:hover,
+#play:focus {
     scale: 110%;
 }
 
@@ -505,8 +510,6 @@ form:has(#watch-again) {
     height: 1.2em;
     fill: black;
 }
-
-
 
 @keyframes fadeOut {
     from {
