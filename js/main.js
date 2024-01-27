@@ -1,7 +1,7 @@
 const animationDuration = 1_000;
 const animationsTimingFunction = 'cubic-bezier(.19, 1, .22, 1)';
 
-$(document).ready(async function () {
+$(document).ready(function () {
     $(window).on({
         scroll: updateStyles,
         resize: updateStyles,
@@ -12,40 +12,42 @@ $(document).ready(async function () {
     if ($('#video')[0]) {
         var promise = $('#video')[0].play();
 
-        if (promise !== undefined) {
-            await promise
-                .then((_) => {
-                    console.log('Browser supports autoplay.');
-                    setTimeout(function () {
-                        videoClose();
-                    }, 11_500 - animationDuration);
-                })
-                .catch((err) => {
-                    console.log('Error while trying to play video.');
-                    unmute();
-                    $('#play').css({
-                        display: 'block',
-                        animation:
-                            'fadeIn 1s ' +
-                            animationsTimingFunction +
-                            ' forwards',
-                    });
-                    $('#video').on('play', function () {
+        $('#video').on('loadeddata', async function () {
+            if (promise !== undefined) {
+                await promise
+                    .then((_) => {
+                        console.log('Browser supports autoplay.');
                         setTimeout(function () {
                             videoClose();
                         }, 11_500 - animationDuration);
+                    })
+                    .catch((err) => {
+                        console.log('Error while trying to play video.');
+                        unmute();
+                        $('#play').css({
+                            display: 'block',
+                            animation:
+                                'fadeIn 1s ' +
+                                animationsTimingFunction +
+                                ' forwards',
+                        });
+                        $('#video').on('play', function () {
+                            setTimeout(function () {
+                                videoClose();
+                            }, 11_500 - animationDuration);
+                        });
                     });
-                });
-        }
+            }
 
-        $('#video').css({
-            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
-        });
-        $('#unmute').css({
-            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
-        });
-        $('#close').css({
-            animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+            $('#video').css({
+                animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+            });
+            $('#unmute').css({
+                animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+            });
+            $('#close').css({
+                animation: 'fadeIn 1s ' + animationsTimingFunction + ' forwards',
+            });
         });
     }
 
