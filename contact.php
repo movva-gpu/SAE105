@@ -56,7 +56,7 @@ error_reporting(0);
             }
             ?>
             <h1>Contact</h1>
-            <form method='post' action='traitements/envoi_mail.php'>
+            <form id="contact" method='post' action='traitements/envoi_mail.php'>
                 <div id='author'>
                     <div id='label'>
                         <label for='first-name'>Prénom : <span title="Champ obligatoire" class="help">*</span></label>

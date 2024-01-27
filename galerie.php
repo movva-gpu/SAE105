@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/utils.php'; error_reporting(0) ?>
+<?php require_once __DIR__ . '/utils.php'; error_reporting(0); ?>
 <!DOCTYPE html>
 <html lang='fr'>
 
@@ -76,7 +76,7 @@
             }
             ?>
             <h1>Ajouter une image</h1>
-            <form action='traitements/upload_image.php' method='post' enctype='multipart/form-data'>
+            <form id='upload-form' action='traitements/upload_image.php' method='post' enctype='multipart/form-data'>
                 <label for='alt'>Text alternatif : <span title="Champ obligatoire" class="help">*</span></label>
                 <input type='text' name='alt' id='alt' placeholder='Le 13ème docteur' required>
                 <label for='title'>Image en format <a href='https://github.com/AOMediaCodec/av1-avif' title='En apprendre plus sur le format AV1' target='_blank'>.avif</a>, <a href='https://developers.google.com/speed/webp?hl=fr' title='En apprendre plus sur le WebP' target='_blank'>.webp</a> ou <a href="https://jpeg.org/jpeg/" title="En apprendre plus sur le JPEG" target="_blank">.jpeg</a>/<a href="https://jpeg.org/jpeg/" title="En apprendre plus sur le JPEG" target="_blank">.jpg</a> : <span title="Champ obligatoire" class='help'>*</span></label>
