@@ -24,11 +24,13 @@ if ($image_error != 0) {
 // Test image
 
 if ($image['file_type'] != 'image/avif' &&
-    $image['file_type'] != 'image/webp')
-        array_push($error, 'file_type');
+    $image['file_type'] != 'image/webp' &&
+    $image['file_type']!= 'image/jpeg') array_push($error, 'file_type');
         
 if (exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
-    exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP)
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP &&
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG &&
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG2000)
         array_push($error, 'file_type');
 
 if ($image['file_size'] > 500_000) array_push($error, 'file_size');

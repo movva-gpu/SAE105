@@ -77,12 +77,18 @@
                 <input type='text' name='alt' id='alt' placeholder='Le 13ème docteur' required>
                 <label for='title'>Image en format <a href='https://github.com/AOMediaCodec/av1-avif'
                         title='En apprendre plus sur le format AV1'
-                        target='_blank'>.avif</a> ou <a
+                        target='_blank'>.avif</a>, <a
                         href='https://developers.google.com/speed/webp?hl=fr'
-                        title='EN apprendre plus sur le WebP'
-                        target='_blank'>.webp</a> : <span title="Champ obligatoire"
+                        title='En apprendre plus sur le WebP'
+                        target='_blank'>.webp</a> ou <a
+                        href="https://jpeg.org/jpeg/"
+                        title="En apprendre plus sur le JPEG"
+                        target="_blank">.jpeg</a>/<a
+                        href="https://jpeg.org/jpeg/"
+                        title="En apprendre plus sur le JPEG"
+                        target="_blank">.jpg</a> : <span title="Champ obligatoire"
                         class='help'>*</span></label>
-                <input type='file' name='image' required accept='image/avif, image/webp'>
+                <input type='file' name='image' required accept='image/avif, image/webp, image/jpeg'>
                 <button type='submit'>
                     <svg id="before" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
