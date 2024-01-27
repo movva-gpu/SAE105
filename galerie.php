@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/utils.php'; ?>
+<?php require_once __DIR__ . '/utils.php'; error_reporting(0) ?>
 <!DOCTYPE html>
 <html lang='fr'>
 
@@ -14,12 +14,13 @@
             <div id='gallery'>
                 <?php
                 $gallery_path = 'images/galerie/';
-                $gallery_folder = opendir($gallery_path);
-                while (($file = readdir($gallery_folder)) !== false) {
+                $gallery_files = scandir($gallery_path);
+                array_multisort($gallery_files);
+                while ($file = array_shift($gallery_files)) {
                     if ($file == '.' || $file == '..' || $file == 'alt')
                         continue;
                     $file_name = explode('.', $file)[0];
-                    echo '<img height=380 src=' . $gallery_path . $file .
+                    echo '<img height=260 src=' . $gallery_path . $file .
                         ' alt="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') .
                         '" title="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') . '">';
                 }

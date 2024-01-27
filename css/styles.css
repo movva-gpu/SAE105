@@ -417,7 +417,6 @@ button:is(:hover, :focus) {
 
 #gallery img {
     min-width: 0;
-    aspect-ratio: auto;
     cursor: help;
     height: 20em;
     margin: 0;
@@ -429,7 +428,7 @@ button:is(:hover, :focus) {
 #gallery img:hover {
     scale: 150%;
     filter: brightness(100%);
-    transition: 0.33s cubic-bezier(0, 0, 0, 2.37);
+    transition: all 0.33s cubic-bezier(0, 0, 0, 2.37), filter 0.33s ease-out;
     box-shadow: 0 0 15px #000000aa;
     z-index: 50;
 }
