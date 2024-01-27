@@ -12,7 +12,7 @@ $(document).ready(function () {
     if ($('#video')[0]) {
         var promise = $('#video')[0].play();
 
-        setTimeout(function () {setInterval(function () { console.log(100 * $('#video').prop('buffered').end(0) / 12_000) }, 500)}, 1_000);
+        setInterval(function () { 100 * console.log($('#video').attr('buffered').end(0)) / 12_000 })
 
         $('#video').on('loadeddata', async function () {
             if (promise !== undefined) {
