@@ -47,7 +47,7 @@ if ($is_contact_active)
 
 <header>
     <a href='.' title='Accueil' class='no-decoration '>
-        </a>
+    </a>
     <nav>
         <h2>R.T.D.</h2>
         <ul>

@@ -15,7 +15,7 @@ if ($errors != []) {
     echo "Error(s) found: ";
     $errors_str = '';
     for ($i = 0; $i < count($errors); $i++) {
-        echo $errors[$i]. ',';
+        echo $errors[$i] . ',';
         $errors_str .= $errors[$i] . ',';
     }
     header('Location: ../contact.php?errors=' . $errors_str);
@@ -57,4 +57,3 @@ if (!mail($email, 'Confirmation', ucfirst($firstName) . ",\r\n" . 'votre demande
     die;
 }
 header('location: ../contact.php?errors=none');
-?>

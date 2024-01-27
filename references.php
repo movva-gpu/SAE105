@@ -5,7 +5,9 @@ error_reporting(0);
 require_once 'utils.php';
 
 require 'vendor/autoload.php';
+
 use Michelf\Markdown;
+
 $md_html = Markdown::defaultTransform(file_get_contents('CREDITS.md'));
 
 ?>

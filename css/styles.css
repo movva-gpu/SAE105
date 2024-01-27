@@ -311,18 +311,18 @@ form .help {
 }
 
 .success {
-    --_back: #CAF7CA;
+    --_back: #caf7ca;
     --_color: #007500;
 }
 
 .error {
-    --_back: #FFEBEB;
-    --_color: #DB0000;
+    --_back: #ffebeb;
+    --_color: #db0000;
 }
 
 .warning {
-    --_back: #FFF0DB;
-    --_color: #AC5200;
+    --_back: #fff0db;
+    --_color: #ac5200;
 }
 
 input,

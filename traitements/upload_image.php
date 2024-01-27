@@ -23,15 +23,19 @@ if ($image_error != 0) {
 
 // Test image
 
-if ($image['file_type'] != 'image/avif' &&
+if (
+    $image['file_type'] != 'image/avif' &&
     $image['file_type'] != 'image/webp' &&
-    $image['file_type']!= 'image/jpeg') array_push($error, 'file_type');
-        
-if (exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
+    $image['file_type'] != 'image/jpeg'
+) array_push($error, 'file_type');
+
+if (
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
     exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP &&
     exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG &&
-    exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG2000)
-        array_push($error, 'file_type');
+    exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG2000
+)
+    array_push($error, 'file_type');
 
 if ($image['file_size'] > 500_000) array_push($error, 'file_size');
 
@@ -52,12 +56,12 @@ while ($ile = readdir($folder)) {
 }
 
 $file_type = explode('/', $image['file_type'])[1];
-$file_name = 'upload_'. ($file_count + 1);
+$file_name = 'upload_' . ($file_count + 1);
 
 touch('../images/galerie/alt/' . $file_name . '.txt');
 file_put_contents('../images/galerie/alt/' . $file_name . '.txt', $_POST['alt']);
 
-$file_location = '../images/galerie/'. $file_name . '.'. $file_type;
+$file_location = '../images/galerie/' . $file_name . '.' . $file_type;
 
 if (!move_uploaded_file($image['tmp_file'], $file_location)) array_push($error, 'file_move');
 

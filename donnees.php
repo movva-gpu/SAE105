@@ -59,8 +59,7 @@
                     ?>
                 </tbody>
             </table>
-            <p class="help"
-                title='Dans le cadre de la SAE, certains épisodes rédigé par Chris Chibnall ont été inclus.'>Certains
+            <p class="help" title='Dans le cadre de la SAE, certains épisodes rédigé par Chris Chibnall ont été inclus.'>Certains
                 des épisodes ne sont pas réellement écrits par Russell T Davis et certaines dates peuvent être
                 légèrement décalées</p>
         </section>
