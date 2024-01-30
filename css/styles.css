@@ -457,14 +457,14 @@ textarea {
     cursor: help;
     height: 20em;
     margin: 0;
-    filter: brightness(50%);
+    filter: brightness(50%) grayscale(100%);
     transition: 0.167s cubic-bezier(0, 0, 0, 1);
     will-change: transform;
 }
 
 #gallery img:hover {
     scale: 150%;
-    filter: brightness(100%);
+    filter: brightness(100%) grayscale(0);
     transition: all 0.33s cubic-bezier(0, 0, 0, 2.37), filter 0.33s ease-out;
     box-shadow: 0 0 15px #000000aa;
     z-index: 50;
