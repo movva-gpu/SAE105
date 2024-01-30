@@ -65,14 +65,6 @@
         </section>
     </main>
     <?php require_once 'components/footer.php'; ?>
-
-    <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
-
-    <script src='https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js'></script>
-    <script src='https://cdn.datatables.net/plug-ins/1.13.7/sorting/date-euro.js'></script>
-    <script src='https://cdn.datatables.net/plug-ins/1.13.7/sorting/any-number.js'></script>
-
-    <script src='js/main.js'></script>
 </body>
 
 </html>

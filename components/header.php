@@ -49,7 +49,7 @@ if ($is_contact_active)
     <a href='.' title='Accueil' class='no-decoration '>
     </a>
     <nav>
-        <h2>R.T.D.</h2>
+        <h2><a href='.'>R.T.D.</a></h2>
         <ul>
             <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>
             <li><a class='<?= $galerie_class ?>' href='galerie.php' title='Galerie'>Galerie</a></li>

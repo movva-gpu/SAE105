@@ -35,9 +35,6 @@
         </section>
     </main>
     <?php require_once 'components/footer.php'; ?>
-
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src='js/main.js'></script>
 </body>
 
 </html>

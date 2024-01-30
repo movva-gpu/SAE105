@@ -1,4 +1,5 @@
 <?php
+
 require_once 'utils.php';
 
 error_reporting(0);
@@ -31,7 +32,7 @@ error_reporting(0);
                     for ($i = 0; $i < count($errors); $i++) {
                         switch ($errors[$i]) {
                             case 'empty':
-                                echo 'Vous devez remplier tous les champs obligatoires';
+                                echo 'Vous devez remplir tous les champs obligatoires';
                                 break;
                             case 'email':
                                 echo 'Votre adresse e-mail est invalide';
@@ -69,9 +70,32 @@ error_reporting(0);
                 </div>
                 <label for='email'>E-mail : <span title="Champ obligatoire" class="help">*</span></label>
                 <input type='email' name='email' id='email' placeholder='E-mail'>
-                <label for='subject'>Objet :</label>
-                <input type='text' name='subject' id='subject' placeholder='Objet (facultatif)'>
-                <br>
+
+                <fieldset>
+                    <legend>Objet : <span title="Champ obligatoire" class="info">*</span></legend>
+                    <div>
+                        <input type='radio' name='subject' id='info' value="info" checked required>
+                        <label for='info'>Information</label>
+                    </div>
+                    <div>
+                        <input type='radio' name='subject' id='devis' value="devis" required>
+                        <label for='devis'>Demande de devis</label>
+                    </div>
+                    <div>
+                        <input type='radio' name='subject' id='reclam' value="reclam" required>
+                        <label for='reclam'>Réclamation</label>
+                    </div>
+                    <div>
+                        <input type='radio' name='subject' id='other' value="other" required>
+                        <label for='other'>Autre</label>
+                    </div>
+
+                    <div id='other-field' hidden>
+                        <label for='other-subject'>Objet : <span title="Champ obligatoire" class="help">*</span></label>
+                        <input type='text' name='other-subject' id='other-subject' placeholder='Objet'>
+                    </div>
+                </fieldset>
+
                 <label for='message'>Message : <span title="Champ obligatoire" class="help">*</span></label>
                 <textarea name='message' id='message' placeholder='Un magnifique message' required></textarea>
 
@@ -89,8 +113,6 @@ error_reporting(0);
     </main>
     <?php require_once 'components/footer.php'; ?>
 
-    <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
-    <script src='js/main.js'></script>
 </body>
 
 </html>

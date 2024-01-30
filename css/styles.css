@@ -221,6 +221,14 @@ table tbody th {
     padding-left: 1em !important;
 }
 
+th::before {
+    margin-bottom: .1em !important;
+}
+
+th::after {
+    margin-top: .1em !important;
+}
+
 #datatable_wrapper a {
     cursor: pointer;
     margin-inline: 0.5em;
@@ -277,7 +285,7 @@ footer p {
     gap: 1em;
 }
 
-:is(#contact, #upload-form).help {
+:is(#contact, #upload-form) .help {
     text-underline-offset: -0.2em;
     color: red;
 }
@@ -325,20 +333,49 @@ footer p {
     --_color: #ac5200;
 }
 
-input,
+input:not(#devis, #reclam, #info, #other),
 textarea,
-:is(#contact, #upload-form) button {
+:is(#contact, #upload-form) button,
+fieldset {
     padding: 0.25em 1em !important;
     border: solid black 2pt !important;
     border-radius: 0.75em !important;
 }
 
-input {
+input:not(#devis, #reclam, #info, #other) {
     height: 2em !important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif !important;
     font-size: 0.9rem !important;
+}
+
+#other-field {
+    will-change: transform;
+    animation: fadeWiden .5s cubic-bezier(.1, .69, .1, 2) forwards;
+    width: fit-content;
+}
+
+fieldset {
+    border: dashed !important;
+    transition: all .33s;
+}
+
+fieldset div {
+    padding: .4em;
+}
+
+:is(#devis, #reclam, #info, #other) {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    transition: .33s ease-in-out;
+}
+
+:is(#devis, #reclam, #info, #other):checked {
+    border-width: 8px;
 }
 
 textarea {
@@ -456,6 +493,14 @@ video {
     opacity: 0;
 }
 
+:is(#unmute, #close, #play) i::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 48px;
+    color: #fff;
+}
+
 #unmute {
     bottom: 50px;
     width: 64px;
@@ -511,6 +556,13 @@ form:has(#watch-again) {
     fill: black;
 }
 
+footer a {
+    /* translate: 0 calc(1.7pt + 0.25em); */
+    border-bottom: dotted #000000aa 1.8pt;
+    padding-bottom: 0.05em;
+    text-decoration: none !important;
+}
+
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -529,5 +581,17 @@ form:has(#watch-again) {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeWiden {
+    from {
+        opacity: 0;
+        scale: 100% 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100% 100%;
     }
 }

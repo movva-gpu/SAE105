@@ -31,7 +31,6 @@ $md_html = Markdown::defaultTransform(file_get_contents('CREDITS.md'));
 
     <?php require_once 'components/footer.php' ?>
 
-    <script src='js/main.js'></script>
 </body>
 
 </html>
