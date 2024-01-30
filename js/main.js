@@ -88,6 +88,12 @@ $(document).ready(async function () {
             $('#other-subject').prop('required', true);
         }
     }
+
+    if ($('#gallery')[0]) {
+        $('#gallery img').on('mousemove', function (e) {
+            $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.1, '--_mouseY': (((e.clientY - $(this).offset().top - $(window).scrollTop()) / $(this).innerHeight()) * 2) - 1 });
+        });
+    }
 });
 
 function updateStyles() {
