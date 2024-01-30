@@ -456,12 +456,13 @@ textarea {
     --_mouseX: 0;
     --_mouseY: 0;
     cursor: help;
-    width: 33%;
+    min-width: 33%;
     height: auto;
     margin: 0;
     filter: brightness(50%) grayscale(100%);
     transition: 0.167s cubic-bezier(0, 0, 0, 1), transform .67s ease-out;
     will-change: transform;
+    box-shadow: none;
 }
 
 #gallery img:hover {
@@ -471,6 +472,7 @@ textarea {
     box-shadow: 0 0 15px #000000aa;
     z-index: 50;
     transform: perspective(700px) rotateX(calc(var(--_mouseY) * -5deg)) rotateY(calc(var(--_mouseX) * 5deg));
+    box-shadow: none;
 }
 
 video {
