@@ -20,3 +20,5 @@
 # Autres crédits
 
 -   Thanks to [Michel Fortin](https://github.com/michelf) for PHP-Markdown
+-   Thanks to [Mojtaba Seyedi](https://codepen.io/seyedi) on codepen.io for your CSS Cards collection
+-   Thanks to [OpenAI](https://openai.com) for ChatGPT 3.5

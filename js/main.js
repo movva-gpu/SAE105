@@ -91,7 +91,15 @@ $(document).ready(async function () {
 
     if ($('#gallery')[0]) {
         $('#gallery img').on('mousemove', function (e) {
-            $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.1, '--_mouseY': (((e.clientY - $(this).offset().top) / $(this).innerHeight()) * 2) - 1 });
+            // $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.5, '--_mouseY': (((e.clientY - $(this).offset().top) / $(this).innerHeight()) * 2) - 1.5 });
+            var mouseX = ((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2 - 1;
+            var mouseY = ((e.clientY + $(window).scrollTop() - $(this).offset().top) / $(this).innerHeight()) * 2 - 1;
+    
+            $(this).css('--_mouseX', mouseX).css('--_mouseY', mouseY);
+        });
+
+        $('#gallery img').on('mouseout', function () {
+            $(this).css({ '--_mouseX': 0, '--_mouseY': 0 });
         });
     }
 });
