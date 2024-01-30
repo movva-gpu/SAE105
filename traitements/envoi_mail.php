@@ -103,7 +103,7 @@ header('location: ../contact.php?errors=none');
  * @return string The message with the given title, message, and link.
  */
 function makeMsg($title, $message, $put_link) : string {
-    return "
+    $toReturn = "
     <!doctype html>\n
     <html>\n
     <head>\n
@@ -138,19 +138,18 @@ function makeMsg($title, $message, $put_link) : string {
                 " . $title ."
             </h1>\n
             <p>". $message ."</p>\n
-            <p style=\"text-align: right\">Cordialement,<br/>L'équipe New Who</p>\n" . $put_link ?
-            "<hr/>\n
-            <ul style=\"list-style: none; padding: 0; margin: 0; display: flex; gap: 1em\">\n
-            <li>\n
-                <a href=\"http://mmi23f13.sae105.ovh/\" style=\"color: #555; text-decoration: none\">\n
-                    Acceuil
-                </a>\n
-            </li>\n
-            </ul>\n" : "" . "
+            <p style=\"text-align: right\">Cordialement,<br/>L'équipe New Who</p>\n";
 
-        </div>\n
-      
-    </body>\n
+    $link = $put_link ?
+    "<hr/>\n
+    <ul style=\"list-style: none; padding: 0; margin: 0; display: flex; gap: 1em\">\n
+    <li>\n
+        <a href=\"http://mmi23f13.sae105.ovh/\" style=\"color: #555; text-decoration: none\">\n
+            Acceuil
+        </a>\n
+    </li>\n
+    </ul>\n" : "";
 
-    </html>\n";
+    return $toReturn . $link . "</div>\n</body>\n</html>\n";
+
 }
