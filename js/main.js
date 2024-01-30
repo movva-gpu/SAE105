@@ -91,7 +91,7 @@ $(document).ready(async function () {
 
     if ($('#gallery')[0]) {
         $('#gallery img').on('mousemove', function (e) {
-            $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.1, '--_mouseY': (((e.clientY - $(this).offset().top - $(window).scrollTop()) / $(this).innerHeight()) * 2) - 1 });
+            $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.1, '--_mouseY': (((e.clientY - $(this).offset().top) / $(this).innerHeight()) * 2) - 1 });
         });
     }
 });
