@@ -31,8 +31,7 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
                 </svg>
             </button>
             <video id="video" preload="auto" muted>
-                <source src="assets/dw_logo_intro.mkv" type="video/mkv">
-                <source src="assets/dw_logo_intro.mp4" type="video/mp4">
+                <source src="assets/dw_logo_intro.webm" type="video/webm">
             </video>';
         $_SESSION['video_watched'] = true;
     } ?>
