@@ -90,16 +90,18 @@ $(document).ready(async function () {
     }
 
     if ($('#gallery')[0]) {
-        $('#gallery img').on('mousemove', function (e) {
-            // $(this).css({ '--_mouseX': (((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2) - 1.5, '--_mouseY': (((e.clientY - $(this).offset().top) / $(this).innerHeight()) * 2) - 1.5 });
-            var mouseX = ((e.clientX - $(this).position().left) / $(this).innerWidth()) * 2 - 1;
-            var mouseY = ((e.clientY + $(window).scrollTop() - $(this).offset().top) / $(this).innerHeight()) * 2 - 1;
-    
-            $(this).css('--_mouseX', mouseX).css('--_mouseY', mouseY);
+        $('.gallery-div').on('mousemove', function (e) {
+            var mouseX = ((Math.round((e.clientX - $(this).offset().left) / $(this).width() / 1.05 * 100) / 100) * 2) - 1;
+            var mouseY = ((Math.round((e.clientY + $(window).scrollTop() - $(this).offset().top) / $(this).height() / 1.05 * 100) / 100) * 2) - 1;
+
+            var lightTop = (mouseY + 1) / 2 * $(this).height();
+            var lightLeft= (mouseX + 1) / 2 * $(this).width();
+
+            $(this).css({ '--_mouseX': mouseX, '--_mouseY': mouseY, '--_lightTop': lightTop, '--_lightLeft': lightLeft });
         });
 
-        $('#gallery img').on('mouseout', function () {
-            $(this).css({ '--_mouseX': 0, '--_mouseY': 0 });
+        $('.gallery-div').on('mouseout', function () {
+            $(this).css({ '--_mouseX': 0, '--_mouseY': 0, '--_lightTop': 0, '--_lightLeft': 0 });
         });
     }
 });

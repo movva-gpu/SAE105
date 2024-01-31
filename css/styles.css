@@ -222,11 +222,11 @@ table tbody th {
 }
 
 th::before {
-    margin-bottom: .1em !important;
+    margin-bottom: 0.1em !important;
 }
 
 th::after {
-    margin-top: .1em !important;
+    margin-top: 0.1em !important;
 }
 
 #datatable_wrapper a {
@@ -352,17 +352,17 @@ input:not(#devis, #reclam, #info, #other) {
 
 #other-field {
     will-change: transform;
-    animation: fadeWiden .5s cubic-bezier(.1, .69, .1, 2) forwards;
+    animation: fadeWiden 0.5s cubic-bezier(0.1, 0.69, 0.1, 2) forwards;
     width: fit-content;
 }
 
 fieldset {
     border: dashed !important;
-    transition: all .33s;
+    transition: all 0.33s;
 }
 
 fieldset div {
-    padding: .4em;
+    padding: 0.4em;
 }
 
 :is(#devis, #reclam, #info, #other) {
@@ -371,7 +371,7 @@ fieldset div {
     width: 16px;
     height: 16px;
     border: 2px solid black;
-    transition: .33s ease-in-out;
+    transition: 0.33s ease-in-out;
 }
 
 :is(#devis, #reclam, #info, #other):checked {
@@ -449,30 +449,61 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 #gallery img {
-    --_mouseX: 0;
-    --_mouseY: 0;
+    position: relative;
     cursor: help;
     min-width: 33%;
     height: auto;
     margin: 0;
     filter: brightness(50%) grayscale(100%);
-    transition: 0.167s cubic-bezier(0, 0, 0, 1), transform .67s ease-out;
+    transition: all 0.167s cubic-bezier(0.69, 0.42, 0.42, 1.42);
     will-change: transform;
     box-shadow: none;
+    border: 0 transparent solid;
+}
+
+.gallery-div {
+    --_mouseX: 0;
+    --_mouseY: 0;
+    --_lightTop: 0;
+    --_lightLeft: 0;
+    position: relative;
+    height: min-content;
 }
 
 #gallery img:hover {
-    scale: 150%;
+    scale: 105%;
     filter: brightness(100%) grayscale(0);
-    transition: all 0.33s cubic-bezier(0, 0, 0, 2.37), filter 0.33s ease-out, transform 0 linear;
-    box-shadow: 0 0 15px #000000aa;
+    transition: all 0.33s cubic-bezier(0, 0, 0, 2.69), filter 0.33s ease-out,
+        transform 0.33s cubic-bezier(0, 0, 0, 0.69);
     z-index: 50;
-    transform: perspective(700px) rotateX(calc(var(--_mouseY) * -5deg)) rotateY(calc(var(--_mouseX) * 5deg));
+    transform: perspective(700px) rotateX(calc(var(--_mouseY) * -15deg))
+        rotateY(calc(var(--_mouseX) * 15deg));
+    border: 0.5em solid black;
     box-shadow: none;
+}
+
+.gallery-div::after {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    translate: calc(var(--_lightLeft) * 1px - 50%) calc(var(--_lightTop) * 1px - 50%);
+    transform: perspective(700px) rotateX(calc(var(--_mouseY) * -15deg))
+    rotateY(calc(var(--_mouseX) * 15deg));
+    background: radial-gradient(circle at center, white, transparent 35%);
+    filter: blur(35px);
+    mix-blend-mode: screen;
+    opacity: max(calc(var(--_lightLeft) + var(--_lightTop)));
+    border-radius: 1em;
+    z-index: 100;
 }
 
 video {

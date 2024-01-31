@@ -21,9 +21,9 @@ error_reporting(0); ?>
                     if ($file == '.' || $file == '..' || $file == 'alt')
                         continue;
                     $file_name = explode('.', $file)[0];
-                    echo '<img width=312 src=' . $gallery_path . $file .
+                    echo '<div class="gallery-div"><img width=312 src=' . $gallery_path . $file .
                         ' alt="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') .
-                        '" title="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') . '">';
+                        '" title="' . file_get_contents($gallery_path . 'alt/' . $file_name . '.txt') . '"></div>';
                 }
                 ?>
             </div>
