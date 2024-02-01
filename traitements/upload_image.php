@@ -17,7 +17,7 @@ $image['tmp_file'] = $_FILES['image']['tmp_name'];
 $image_error = $_FILES['image']['error'];
 
 if ($image_error != 0) {
-    array_push($error, 'file_error');
+        array_push($error, 'file_error');
     header('Location: ../galerie.php?errors=' . $error . '#upload');
 }
 
@@ -29,15 +29,22 @@ if (
     $image['file_type'] != 'image/jpeg'
 ) array_push($error, 'file_type');
 
+if ($image['file_size'] > 500_000) array_push($error, 'file_size');
+
+if (!empty($error)) {
+    $errors = '';
+    for ($i = 0; $i < count($error); $i++) $errors .= $error[$i] . ',';
+    echo $errors;
+    header('Location: ../galerie.php?errors=' . $errors . '#upload');
+    die;
+}
+
 if (
     exif_imagetype($image['tmp_file']) != IMAGETYPE_AVIF &&
     exif_imagetype($image['tmp_file']) != IMAGETYPE_WEBP &&
     exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG &&
     exif_imagetype($image['tmp_file']) != IMAGETYPE_JPEG2000
-)
-    array_push($error, 'file_type');
-
-if ($image['file_size'] > 500_000) array_push($error, 'file_size');
+) array_push($error, 'file_type');
 
 if (!empty($error)) {
     $errors = '';
