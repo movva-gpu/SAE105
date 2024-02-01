@@ -221,6 +221,13 @@ table tbody th {
     padding-left: 1em !important;
 }
 
+table tbody tr:hover {
+    background-color: #000 !important;
+    color: white !important;
+    text-shadow: 0 0 15px white, 0 0 15px white, 0 0 30px white !important;
+    border-radius: 1.25em !important;
+}
+
 th::before {
     margin-bottom: 0.1em !important;
 }
