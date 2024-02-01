@@ -12,16 +12,14 @@ $md_html = Markdown::defaultTransform(file_get_contents('CREDITS.md'));
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <?= headGenerator('Références', 'Les références des images', 'références', 'noindex, nofollow'); ?>
 </head>
 
 <body>
-    <header>
-        <a href="<?= $_GET['url']; ?>">← Retour</a>
-    </header>
+    <?php require_once 'components/header.php'; ?>
 
     <main>
         <section>

@@ -4,7 +4,7 @@
 
 -   [La photo de RTD](https://www.theguardian.com/media/2013/nov/19/russell-t-davies-gay-life-channel-4)
 -   [Le logo de Doctor Who 2023](https://commons.wikimedia.org/wiki/File:Doctor_Who_Logo_2023.svg), sous license [Creative Commons](https://creativecommons.org/)
--   [Le logo de la BBC, sous license Creative Commons](https://en.wikipedia.org/wiki/Logo_of_the_BBC)
+-   [Le logo de la BBC](https://en.wikipedia.org/wiki/Logo_of_the_BBC), sous license [Creative Commons](https://creativecommons.org/)
 
 ## Photos de la page Galerie
 

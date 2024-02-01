@@ -72,7 +72,7 @@ error_reporting(0);
                 <input type='email' name='email' id='email' placeholder='E-mail'>
 
                 <fieldset>
-                    <legend>Objet&#160;: <span title="Champ obligatoire" class="info">*</span></legend>
+                    <legend>Objet&#160;: <span title="Champ obligatoire" class="help">*</span></legend>
                     <div>
                         <input type='radio' name='subject' id='info' value="info" checked required>
                         <label for='info'>Information</label>

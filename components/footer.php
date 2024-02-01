@@ -13,7 +13,7 @@ error_reporting(0)
         </a> • 
         <?php
         if (!str_contains($_SERVER['PHP_SELF'], 'references.php')) {
-            echo '<a href="../references.php?url=' . $_SERVER['PHP_SELF'] . '">Références</a> • ';
+            echo '<a href="../references.php">Références</a> • ';
         }
         ?>
         <a href='https://github.com/movva-gpu/SAE105' title="Source du projet sur GitHub">

@@ -32,7 +32,9 @@
                         <h2>Eugénie Podevin<span class="no-bg">🩷</span></h2>
                         <small>Secrétaire et développeuse à temps partiel</small>
                         <p>
-                            Salut ! Moi c'est Eugénie, jai 19 ans et je suis la secrétaire de l'entreprise et, en même temps, développeuse à temps partiel. J'ai choisi de travailler pour l'association qui parle des vocaloids. C'est un univers que j'ai toujours aimé depuis très jeune et j'espère leur avoir fait justice avec ce site.
+                            Salut ! Moi c'est Eugénie, j'ai 19 ans et je suis la secrétaire de l'entreprise et, en même temps, développeuse à temps partiel. J'ai choisi de travailler pour l'association qui parle des vocaloids. 
+                            <br><br>
+                            C'est un univers que j'ai toujours aimé depuis très jeune et j'espère leur avoir fait justice avec ce site.
                         </p>
                     </div>
                 </div>
@@ -42,7 +44,9 @@
                         <h2>Noam Brodeur<span class="no-bg">🐵</span></h2>
                         <small>Responsable graphique et éditorial</small>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi dignissimos iusto maiores recusandae id, quos debitis, temporibus tenetur aliquid explicabo mollitia illum porro veniam vero nobis numquam sapiente voluptas.
+                            Je m'appelle Noam, je suis le responsable éditorial et graphique du projet. Sur mon site tu vas pouvoir découvrir CinéTalk. 
+                            <br><br>
+                            Qu'est ce que c'est ? C'est une émission mensuelle sur le cinéma, sur ce site tu vas pouvoir trouver les films indispensable à voir ou à revoir.
                         </p>
                     </div>
                 </div>
@@ -58,8 +62,8 @@
                 </div>
             </div>
             <div id="buttons-container">
-                <a class="part-btn" id="chart-btn" href="docs/charte-projet.pdf">Voir/Télécharger la charte de projet</a>
-                <a class="part-btn" id="plan-btn" href="docs/plan-projet.pdf">Voir/Télécharger le plan de projet</a>
+                <a class="part-btn" id="chart-btn" href="pdf/charte-projet.pdf">Voir/Télécharger la charte de projet</a>
+                <a class="part-btn" id="plan-btn" href="pdf/plan-projet.pdf">Voir/Télécharger le plan de projet</a>
             </div>
         </section>
     </main>

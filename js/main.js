@@ -2,10 +2,7 @@ const videAnimationDuration = 1_000; // milliseconds
 const videoAnimationsTimingFunction = 'cubic-bezier(.17,.66,.24,1)';
 
 $(document).ready(async function () {
-    $(window).on({
-        scroll: updateStyles,
-        resize: updateStyles,
-    });
+    $(window).on({scroll: updateStyles, resize: updateStyles});
 
     updateStyles();
 
@@ -13,63 +10,66 @@ $(document).ready(async function () {
         var promise = $('#video')[0].play();
 
         if (promise !== undefined) {
-            await promise
-                .then((_) => {
-                    console.log('Browser supports autoplay.');
+            await promise.then((_) => {
+                console.log('Browser supports autoplay.');
+                setTimeout(function () {
+                    videoClose();
+                }, 11_500 - videAnimationDuration);
+            }).catch((err) => {
+                console.log('Error while trying to play video.');
+                unmute();
+                $('#play').css({
+                    display: 'block',
+                    animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards'
+                });
+                $('#video').on('play', function () {
                     setTimeout(function () {
                         videoClose();
                     }, 11_500 - videAnimationDuration);
-                })
-                .catch((err) => {
-                    console.log('Error while trying to play video.');
-                    unmute();
-                    $('#play').css({
-                        display: 'block',
-                        animation:
-                            'fadeIn 1s ' +
-                            videoAnimationsTimingFunction +
-                            ' forwards',
-                    });
-                    $('#video').on('play', function () {
-                        setTimeout(function () {
-                            videoClose();
-                        }, 11_500 - videAnimationDuration);
-                    });
                 });
+            });
         }
 
         $('#video').css({
-            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards',
+            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards'
         });
         $('#unmute').css({
-            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards',
+            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards'
         });
         $('#close').css({
-            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards',
+            animation: 'fadeIn 1s ' + videoAnimationsTimingFunction + ' forwards'
         });
     }
 
     if ($('#datatable')[0]) {
         $('#datatable').DataTable({
             language: {
-                url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json',
+                url: 'http://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json'
             },
             columnDefs: [
-                { type: 'date-euro', targets: 1 },
-                { type: 'any-number', targets: 2 },
-                { type: 'any-number', targets: 4 },
+                {
+                    type: 'date-euro',
+                    targets: 1
+                }, {
+                    type: 'any-number',
+                    targets: 2
+                }, {
+                    type: 'any-number',
+                    targets: 4
+                }
             ],
             scrollCollapse: false,
             scrollY: '60svh',
-            paging: false,
+            paging: false
         });
     }
 
     if ($('#contact')[0]) {
-        $('#info').on('change', function () {
-            $('#other-field').prop('hidden', true);
-            $('#other-subject').prop('required', false);
-        });
+        $('#info')
+            .on('change', function () {
+                $('#other-field').prop('hidden', true);
+                $('#other-subject').prop('required', false);
+            });
         $('#devis').on('change', function () {
             $('#other-field').prop('hidden', true);
             $('#other-subject').prop('required', false);
@@ -90,18 +90,19 @@ $(document).ready(async function () {
     }
 
     if ($('#gallery')[0]) {
-        $('.gallery-div').on('mousemove', function (e) {
-            var mouseX = ((Math.round((e.clientX - $(this).offset().left) / $(this).width() / 1.05 * 100) / 100) * 2) - 1;
-            var mouseY = ((Math.round((e.clientY + $(window).scrollTop() - $(this).offset().top) / $(this).height() / 1.05 * 100) / 100) * 2) - 1;
+        $('.gallery-div')
+            .on('mousemove', function (e) {
+                var mouseX = ((Math.round((e.clientX - $(this).offset().left) / $(this).width() / 1.05 * 100) / 100) * 2) - 1;
+                var mouseY = ((Math.round((e.clientY + $(window).scrollTop() - $(this).offset().top) / $(this).height() / 1.05 * 100) / 100) * 2) - 1;
 
-            var lightTop = (mouseY + 1) / 2 * $(this).height();
-            var lightLeft= (mouseX + 1) / 2 * $(this).width();
+                var lightTop = (mouseY + 1) / 2 * $(this).height();
+                var lightLeft = (mouseX + 1) / 2 * $(this).width();
 
-            $(this).css({ '--_mouseX': mouseX, '--_mouseY': mouseY, '--_lightTop': lightTop, '--_lightLeft': lightLeft });
-        });
+                $(this).css({'--_mouseX': mouseX, '--_mouseY': mouseY, '--_lightTop': lightTop, '--_lightLeft': lightLeft});
+            });
 
         $('.gallery-div').on('mouseout', function () {
-            $(this).css({ '--_mouseX': 0, '--_mouseY': 0, '--_lightTop': 0, '--_lightLeft': 0 });
+            $(this).css({'--_mouseX': 0, '--_mouseY': 0, '--_lightTop': 0, '--_lightLeft': 0});
         });
     }
 });
@@ -113,35 +114,19 @@ function updateStyles() {
     let RTD = $('header h2');
 
     if (scrollY == 0) {
-        header.css({
-            backgroundColor: 'white',
-            color: 'black',
-        });
+        header.css({backgroundColor: 'white', color: 'black'});
 
-        navLinks.css({
-            color: 'black',
-            borderColor: 'black',
-        });
+        navLinks.css({color: 'black', borderColor: 'black'});
 
-        RTD.css({
-            color: 'black',
-        });
+        RTD.css({color: 'black'});
 
         $('nav a.active').toggleClass('changed', false);
     } else {
-        header.css({
-            backgroundColor: '#00000085',
-            color: 'white',
-        });
+        header.css({backgroundColor: '#00000085', color: 'white'});
 
-        navLinks.css({
-            color: 'white',
-            borderColor: 'white',
-        });
+        navLinks.css({color: 'white', borderColor: 'white'});
 
-        RTD.css({
-            color: 'white',
-        });
+        RTD.css({color: 'white'});
 
         $('nav a.active').toggleClass('changed', true);
     }
@@ -149,18 +134,20 @@ function updateStyles() {
 
 function videoClose() {
     $('#video').css({
-        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards',
+        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards'
     });
     $('#unmute').css({
-        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards',
+        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards'
     });
     $('#close').css({
-        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards',
+        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards'
     });
     $('#play').css({
-        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards',
+        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards'
     });
-    $('#video').animate({ volume: 0 }, videAnimationDuration + 750);
+    $('#video').animate({
+        volume: 0
+    }, videAnimationDuration + 750);
 
     setTimeout(function () {
         $('#video').remove();
@@ -185,7 +172,7 @@ function unmute() {
 function videoPlay() {
     $('#video')[0].play();
     $('#play').css({
-        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards',
+        animation: 'fadeOut 1s ' + videoAnimationsTimingFunction + ' forwards'
     });
 
     setTimeout(function () {

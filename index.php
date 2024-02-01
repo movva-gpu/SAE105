@@ -55,9 +55,9 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
                 <br><br>
                 En parlant de Doctor Who, il est incontestablement considéré comme le meilleur show-runner de Doctor
                 Who. De plus, il est de retour pour une nouvelle saison avec le 15e docteur&#160;:
-                <a rel="external nofollow" href="https://fr.wikipedia.org/wiki/Ncuti_Gatwa">Ncuti Gatwa</a>
+                <a rel="external nofollow" href="https://fr.wikipedia.org/wiki/Ncuti_Gatwa">Ncuti Gatwa</a>.
                 <br><br>
-                Il a aussi rédigé les 3 épisodes spéciaux des 60 ans de la série ainsi que l'épisode de Noël.
+                Il a aussi rédigé les trois épisodes spéciaux des 60 ans de la série ainsi que l'épisode de Noël.
             </p>
         </section>
     </main>
