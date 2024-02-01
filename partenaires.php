@@ -32,7 +32,7 @@
                         <h2>Eugénie Podevin<span class="no-bg">🩷</span></h2>
                         <small>Secrétaire et développeuse à temps partiel</small>
                         <p>
-                        Salut ! Moi c'est Eugénie, jai 19 ans et je suis la secrétaire de l'entreprise et, en même temps, développeuse à temps partiel. J'ai choisi de travailler pour l'association qui parle des vocaloids. C'est un univers que j'ai toujours aimé depuis très jeune et j'espère leur avoir fait justice avec ce site.
+                            Salut ! Moi c'est Eugénie, jai 19 ans et je suis la secrétaire de l'entreprise et, en même temps, développeuse à temps partiel. J'ai choisi de travailler pour l'association qui parle des vocaloids. C'est un univers que j'ai toujours aimé depuis très jeune et j'espère leur avoir fait justice avec ce site.
                         </p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         <h2>Pierre Dufort</h2>
                         <small>Chef de projet</small>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero atque, ratione aspernatur laborum quod quisquam repellendus dolorem quam fugit natus earum modi esse laudantium voluptatibus id beatae dolor rem quidem.
+                            Salut, je me présente Pierre, 18 ans, chef de projet de l'entreprise et aussi développeur. J'ai choisi de faire mon site sur le rugby car c'est mon sport préféré, j'en ai pratiqué durant 7 ans et je suis fier de pouvoir contribuer à la promotion de ce sport
                         </p>
                     </div>
                 </div>

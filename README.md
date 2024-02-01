@@ -2,7 +2,8 @@
 
 > <http://mmi23f13.sae105.ovh>
 
-Site créé dans le cadre de la SAE105 sur le thème du cinéma : Russell T Davies, un showrunner de Doctor Who
+Site créé dans le cadre de la SAE105 sur le thème du cinéma&#160;:<br>
+Russell T Davies, un showrunner de Doctor Who
 
 ## Note importante
 

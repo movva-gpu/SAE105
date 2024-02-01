@@ -207,6 +207,16 @@ section p {
     /* max-width: 67ch; */
 }
 
+.p {
+    max-width: 70ch;
+    margin-top: 2lh;
+    line-height: 1.2;
+}
+
+.p br {
+    line-height: 1.33;
+}
+
 #datatable_wrapper {
     margin-block: 2em !important;
 }

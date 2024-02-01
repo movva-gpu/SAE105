@@ -60,19 +60,19 @@ error_reporting(0);
             <form id="contact" method='post' action='traitements/envoi_mail.php'>
                 <div id='author'>
                     <div id='label'>
-                        <label for='first-name'>Prénom : <span title="Champ obligatoire" class="help">*</span></label>
-                        <label for='name'>Nom : <span title="Champ obligatoire" class="help">*</span></label>
+                        <label for='first-name'>Prénom&#160;: <span title="Champ obligatoire" class="help">*</span></label>
+                        <label for='name'>Nom&#160;: <span title="Champ obligatoire" class="help">*</span></label>
                     </div>
                     <div id='input'>
                         <input type='text' name='first-name' id='first-name' placeholder='Jess' required>
                         <input type='text' name='name' id='name' placeholder='Doe' required>
                     </div>
                 </div>
-                <label for='email'>E-mail : <span title="Champ obligatoire" class="help">*</span></label>
+                <label for='email'>E-mail&#160;: <span title="Champ obligatoire" class="help">*</span></label>
                 <input type='email' name='email' id='email' placeholder='E-mail'>
 
                 <fieldset>
-                    <legend>Objet : <span title="Champ obligatoire" class="info">*</span></legend>
+                    <legend>Objet&#160;: <span title="Champ obligatoire" class="info">*</span></legend>
                     <div>
                         <input type='radio' name='subject' id='info' value="info" checked required>
                         <label for='info'>Information</label>
@@ -91,12 +91,12 @@ error_reporting(0);
                     </div>
 
                     <div id='other-field' hidden>
-                        <label for='other-subject'>Objet : <span title="Champ obligatoire" class="help">*</span></label>
+                        <label for='other-subject'>Objet&#160;: <span title="Champ obligatoire" class="help">*</span></label>
                         <input type='text' name='other-subject' id='other-subject' placeholder='Objet'>
                     </div>
                 </fieldset>
 
-                <label for='message'>Message : <span title="Champ obligatoire" class="help">*</span></label>
+                <label for='message'>Message&#160;: <span title="Champ obligatoire" class="help">*</span></label>
                 <textarea name='message' id='message' placeholder='Un magnifique message' required></textarea>
 
                 <button type='submit' name='submit'>

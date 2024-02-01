@@ -59,7 +59,7 @@ echo "Extracting name and first name...";
 $email = $_POST['email'];
 
 echo "Extracting email, subject...";
-$subject = $msgTitle . ' : de la part de ' . ucfirst($firstName) . ' ' . ucfirst($name);
+$subject = $msgTitle . '&#160;: de la part de ' . ucfirst($firstName) . ' ' . ucfirst($name);
 
 echo "Extracting message...";
 $message = $_POST['message'];

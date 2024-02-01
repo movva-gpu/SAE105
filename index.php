@@ -45,14 +45,19 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
             <img src='images/rtd.avif' alt='Photo of Russel T Davies'>
             <img class='dw' src='images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
             <img class='bbc' src='images/bbc.avif' alt='Le logo de la BBC'>
-            <p>
+            <p class="p">
                 Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de
-                télévision
-                et un écrivain gallois. Il est principalement connu pour être un pionnier de l'écriture de séries telles
-                que
+                télévision et un écrivain gallois.
+                Il est principalement connu pour être un pionnier de l'écriture de séries telles que
                 Queer as Folk et The Second Coming, et pour être à l'origine du renouveau d'une des plus anciennes
                 séries télévisées de science-fiction, Doctor Who, dont il a notamment créé les séries dérivées
                 Torchwood et The Sarah Jane Adventures.
+                <br><br>
+                En parlant de Doctor Who, il est incontestablement considéré comme le meilleur show-runner de Doctor
+                Who. De plus, il est de retour pour une nouvelle saison avec le 15e docteur&#160;:
+                <a rel="external nofollow" href="https://fr.wikipedia.org/wiki/Ncuti_Gatwa">Ncuti Gatwa</a>
+                <br><br>
+                Il a aussi rédigé les 3 épisodes spéciaux des 60 ans de la série ainsi que l'épisode de Noël.
             </p>
         </section>
     </main>
