@@ -36,7 +36,7 @@
                             <br><br>
                             C'est un univers que j'ai toujours aimé depuis très jeune et j'espère leur avoir fait justice avec ce site.
                             <br><br>
-                            <a href="http://mmi23e12.sae105.ovh/">Mon site sur les Vocaloids</a>
+                            <a rel="external nofollow" href="http://mmi23e12.sae105.ovh/">Mon site sur les Vocaloids</a>
                         </p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                             <br><br>
                             Qu'est ce que c'est ? C'est une émission mensuelle sur le cinéma, sur ce site tu vas pouvoir trouver les films indispensable à voir ou à revoir.
                             <br><br>
-                            <a href="http://mmi23e02.sae105.ovh/">Le site de CinéTalk</a>
+                            <a rel="external nofollow" href="http://mmi23e03.sae105.ovh/">Le site de CinéTalk</a>
                         </p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <p>
                             Salut, je me présente Pierre, 18 ans, chef de projet de l'entreprise et aussi développeur. J'ai choisi de faire mon site sur le rugby car c'est mon sport préféré, j'en ai pratiqué durant 7 ans et je suis fier de pouvoir contribuer à la promotion de ce sport
                             <br><br>
-                            <a href="http://mmi23e05.sae105.ovh/">Mon site sur le Rugby</a>
+                            <a rel="external nofollow" href="http://mmi23e05.sae105.ovh/">Mon site sur le Rugby</a>
                         </p>
                     </div>
                 </div>
