@@ -6,3 +6,5 @@ jsconfig.json
 
 images/galerie
 /vendor/
+
+pdf/*

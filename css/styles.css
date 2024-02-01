@@ -808,7 +808,7 @@ footer a {
     background-color: #000;
     border-radius: 1.25em;
     text-decoration: none;
-    color: white;
+    color: white !important;
     width: 40%;
 
     transition: cubic-bezier(0, 0, 0, 1) 1s;
