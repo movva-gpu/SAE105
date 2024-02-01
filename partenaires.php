@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/utils.php' ?>
 <!DOCTYPE html>
-<html lang='zxx'>
+<html lang='fr'>
 
 <head>
     <?= headGenerator('Partenaires', 'Nos partenaires', 'Partenaires', 'noindex, nofollow'); ?>
@@ -11,27 +11,56 @@
     <main>
         <section>
             <h1>Partenaires</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veniam exercitationem vitae provident
-                delectus sunt, ea velit molestiae animi veritatis reiciendis assumenda tempora suscipit. Repellat
-                voluptatibus aut qui et asperiores.
-                Vitae, asperiores totam aliquid ut aliquam consequatur necessitatibus molestias blanditiis officiis quos
-                illum laudantium perferendis exercitationem, et quidem harum sed? Expedita at ipsum nostrum ipsa
-                maiores. Architecto fuga ullam repellat.
-                Eligendi adipisci sapiente cupiditate aliquid tempora! Eligendi ea nesciunt quam ad tempora consequuntur
-                soluta excepturi vitae et. Sapiente officiis pariatur, molestiae voluptas iure magnam fugit eligendi?
-                Illum quisquam numquam saepe.
-                Similique deserunt dicta ratione corrupti omnis, ea amet libero nemo quas, necessitatibus odit nulla
-                esse, exercitationem quisquam cumque fugiat dolorem ducimus distinctio laudantium. Labore nam doloremque
-                natus distinctio cumque quae.
-                Sit nostrum voluptas maxime officiis dicta nesciunt nihil ratione suscipit dolor veritatis reiciendis
-                aperiam dolorem quas explicabo, molestias, officia ipsam totam temporibus harum placeat amet
-                consectetur! Velit debitis perferendis ab?
-                Temporibus, doloribus. Facilis ut, quas quod praesentium deserunt a assumenda, excepturi mollitia
-                recusandae corporis autem quo numquam quae rerum sed ad ab labore tempora, laudantium molestias! Quia
-                excepturi placeat sit?
-                Sequi ratione impedit asperiores maiores, tenetur non totam et harum soluta quaerat quia similique quis
-                quo iusto. At animi repellendus aliquam cupiditate provident. Tempora ad unde, labore facilis corporis
-                molestiae.</p>
+            <p class="intro">
+                Nous sommes Shining Head, une entreprise visant à promouvoir la culture, notamment
+                au travers d'associations existantes comme New Who.
+            </p>
+            <div id="partners-container">
+                <div id="dan" class="jojo partners">
+                    <div class="background"><img src="images/partners/dan_color.png"></div>
+                    <div class="content">
+                        <h2>Danyella Strikann<span class="no-bg">✨</span><span class="me">(moi)</span></h2>
+                        <small>Développeuse Full-Stack du projet</small>
+                        <p>
+                            Salut moi c'est Danyella et ce beau site là, c'est moi qui l'ai fait !
+                        </p>
+                    </div>
+                </div>
+                <div id="eug" class="jojo partners">
+                    <div class="background"><img src="images/partners/eug_color.png"></div>
+                    <div class="content">
+                        <h2>Eugénie Podevin<span class="no-bg">🩷</span></h2>
+                        <small>Secrétaire</small>
+                        <p>
+                            Salut moi c'est Danyella et ce beau site là, c'est moi qui l'ai fait !
+                        </p>
+                    </div>
+                </div>
+                <div id="noam" class="jojo partners">
+                    <div class="background"><img src="images/partners/noam_color.png"></div>
+                    <div class="content">
+                        <h2>Noam Brodeur<span class="no-bg">🐵</span></h2>
+                        <small>Responsable graphique et éditorial</small>
+                        <p>
+                            Salut moi c'est Danyella et ce beau site là, c'est moi qui l'ai fait !
+                        </p>
+                    </div>
+                </div>
+                <div class="gunter partners">
+                    <img src="images/partners/gunter.png">
+                    <div class="content">
+                        <h2>Pierre Dufort (a.k.a. Gunter)</h2>
+                        <small>Chef de projet et Gunter de service</small>
+                        <p>
+                            Salut moi c'est Danyella et ce beau site là, c'est moi qui l'ai fait !
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="buttons-container">
+                <a class="part-btn" id="chart-btn" href="docs/charte-projet.pdf">Voir/Télécharger la charte de projet</a>
+                <a class="part-btn" id="plan-btn" href="docs/plan-projet.pdf">Voir/Télécharger le plan de projet</a>
+            </div>
         </section>
     </main>
     <?php require_once 'components/footer.php'; ?>
