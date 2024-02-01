@@ -27,6 +27,8 @@ switch ($url) {
     case 'contact.php':
         $is_contact_active = true;
         break;
+    case 'references.php':
+        break;
 
     default:
         $is_index_active = true;
