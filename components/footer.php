@@ -12,8 +12,8 @@ error_reporting(0)
             Danyella Strikann
         </a> • 
         <?php
-        if (!str_contains($_SERVER['PHP_SELF'], 'references.php')) {
-            echo '<a href="../references.php">Références</a> • ';
+        if (!str_contains($_SERVER['PHP_SELF'], 'refs.php')) {
+            echo '<a href="../refs.php">Références</a> • ';
         }
         ?>
         <a href='https://github.com/movva-gpu/SAE105' title="Source du projet sur GitHub">
