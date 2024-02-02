@@ -14,7 +14,7 @@ error_reporting(0); ?>
             <h1>Galerie</h1>
             <div id='gallery'>
                 <?php
-                $gallery_path = 'images/galerie/';
+                $gallery_path = 'assets/images/gallery/';
                 $gallery_files = scandir($gallery_path);
                 array_multisort($gallery_files);
                 while ($file = array_shift($gallery_files)) {

@@ -22,7 +22,7 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
                 <i class="fa-solid fa-play"></i>
             </button>
             <video id="video" preload="auto" muted>
-                <source src="assets/dw_logo_intro.webm" type="video/webm">
+                <source src="assets/video/dw_logo_intro.webm" type="video/webm">
             </video>';
         $_SESSION['video_watched'] = true;
     } ?>
@@ -42,9 +42,9 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
             </form>
             <h1>Russell T Davies</h1>
             <h2>Un show-runner Doctor Who</h2>
-            <img src='images/rtd.avif' alt='Photo of Russel T Davies'>
-            <img class='dw' src='images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
-            <img class='bbc' src='images/bbc.avif' alt='Le logo de la BBC'>
+            <img src='assets/images/rtd.avif' alt='Photo of Russel T Davies'>
+            <img class='dw' src='assets/images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
+            <img class='bbc' src='assets/images/bbc.avif' alt='Le logo de la BBC'>
             <p class="p">
                 Russell T Davies, de son vrai nom Stephen Russell Davies, né le 27 avril 1963, est un producteur de
                 télévision et un écrivain gallois.

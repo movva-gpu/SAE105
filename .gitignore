@@ -4,7 +4,7 @@ jsconfig.json
 .vscode/
 .prettierrc
 
-images/galerie
+assets/images/gallery
 /vendor/
 
 pdf/*
