@@ -11,4 +11,4 @@ Le projet a un cahier des charges imposant l'utilisation d'images libres de droi
 
 ## Livrable
 
-Le livrable est disponible dans la branche [deliverable/sae105](https://github.com/movva-gpu/SAE105](https://github.com/movva-gpu/SAE105/tree/deliverable/sae105)https://github.com/movva-gpu/SAE105/tree/deliverable/sae105).
+Le livrable est disponible dans la branche [deliverable/sae105](https://github.com/movva-gpu/SAE105/tree/deliverable/sae105).
