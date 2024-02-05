@@ -79,3 +79,12 @@ if (!empty($error)) {
 }
 
 header('Location: ../gallery.php?errors=none#upload');
+?>
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <?= headGenerator('Téléversement de l\'image...', '', '', 'noindex, nofollow'); ?>
+</head>
+
+</html>

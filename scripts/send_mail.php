@@ -153,3 +153,12 @@ function makeMsg($title, $message, $put_link) : string {
     return $toReturn . $link . "</div>\n</body>\n</html>\n";
 
 }
+?>
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <?= headGenerator('Envoi du mail...', '', '', 'noindex, nofollow'); ?>
+</head>
+
+</html>

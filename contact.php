@@ -9,7 +9,7 @@ error_reporting(0);
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Contact', 'Me contacter', 'Contact', 'noindex, nofollow'); ?>
+    <?= headGenerator('Contact', 'Me contacter', 'Contact'); ?>
 </head>
 
 <body>
