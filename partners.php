@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="gunter partners">
-                    <img src="assets/images/partners/gunter.png">
+                    <img src="assets/images/partners/gunter.avif">
                     <div class="content">
                         <h2>Pierre Dufort</h2>
                         <small>Chef de projet</small>
