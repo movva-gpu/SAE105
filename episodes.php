@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $data_file = file_get_contents('datas/data.json');
+                    $data_file = file_get_contents('data/data.json');
                     $data_json = json_decode($data_file, true);
                     foreach ($data_json as $keyY => $episode) {
                         echo '<tr>';
