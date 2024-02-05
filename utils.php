@@ -10,16 +10,25 @@
  *
  * @return string - The generated HTML head section.
  */
-function headGenerator($title, $description, $additional_keywords, $robots = "index, follow"): string
-{
+function headGenerator($title, $description, $additional_keywords, $robots = "index, follow", $color = "#ffffff"): string {
     return '<title>' . $title . '</title>' . "\n" .
         '<meta charset="UTF-8">' . "\n" .
         '<meta http-equiv="X-UA-Compatible" content="IE=edge">' . "\n" .
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n" .
+
         '<meta name="description" content="' . $description . '">' . "\n" .
         '<meta name="keywords" content="Russell T Davies,Doctor Who,BBC,Fan Page,RTD,RT Davies,R.T.D.,' . $additional_keywords . '">' . "\n" .
         '<meta name="author" content="Danyella Strikann">' . "\n" .
         '<meta name="robots" content="' . $robots . '">' . "\n" .
+
+        '<meta property="og:type" content="website">' . "\n" .
+        '<meta property="og:title" content="' . $title . '">' . "\n" .
+        '<meta property="og:url" content="' . $_SERVER['PHP_SELF'] . '">' . "\n" .
+        '<meta property="og:image" content="http://mmi23f13.sae105.ovh/favicon.svg">' . "\n" .
+        '<meta property="og:description" content="' . $description . '">' . "\n" .
+        '<meta name="theme-color" content="' . $color . '">' . "\n" .
+
         '<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" integrity="sha256-xUEHOPRRNShezZ3FVXflP6H64Wdfg92KWQdi7fGsM9M= sha384-RIrIvpfdklIfK8Y485M+dsvjCO72tH+7LYfklICHzp1T4ekgTj7pEU2GqI5lU7XR sha512-b2kaKeEBMs5/Yhl5zCUqBYOQaP5ll1rlHfLbfsjxWAKTS06l885cZdDwk3y0qK5dzQ7EmG1BcVDU9rD66fypgQ==" crossorigin="anonymous">' . "\n" .
+
         '<script src="https://kit.fontawesome.com/97cad273f1.js" crossorigin="anonymous"></script>' . "\n";
 }
