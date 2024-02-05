@@ -21,7 +21,7 @@ function minifyJS() {
 }
 
 function phpSri() {
-    return src('**/*.php')
+    return src('**/*.php', { ignore: 'vendor/**/*.php' })
        .pipe(phpsri())
        .pipe(dest('.'));
 }
