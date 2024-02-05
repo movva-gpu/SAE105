@@ -4,11 +4,11 @@ error_reporting(0)
 <footer>
     <p>
         Sous license <a rel='nofollow' href='LICENSE' title='La license du projet'>
-            <img height="12" alt="logo de Creative Commons" src="https://cdn.simpleicons.org/creativecommons/555"/>
+            <img height="12" alt="logo de Creative Commons" src="https://cdn.simpleicons.org/creativecommons/555">
             MIT
         </a> • 
         Site créé par <a rel='me nofollow' href='https://piaille.fr/@danyella_strikann' title='Mon profil Mastodon'>
-            <img height="12" alt="Logo de Mastodon" src="https://cdn.simpleicons.org/mastodon/555"/>
+            <img height="12" alt="Logo de Mastodon" src="https://cdn.simpleicons.org/mastodon/555">
             Danyella Strikann
         </a> • 
         <?php
@@ -17,7 +17,7 @@ error_reporting(0)
         }
         ?>
         <a href='https://github.com/movva-gpu/SAE105' title="Source du projet sur GitHub">
-            <img height="12" title="Logo de Github" src="https://cdn.simpleicons.org/github/555"/>
+            <img height="12" title="Logo de Github" src="https://cdn.simpleicons.org/github/555">
             Source
         </a>
     </p>

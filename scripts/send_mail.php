@@ -107,8 +107,8 @@ function makeMsg($title, $message, $put_link) : string {
     <!doctype html>\n
     <html>\n
     <head>\n
-      <meta http-equiv=\"Content-Type\" content=\"text/html\; charset=UTF-8\" />\n
-      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n
+      <meta http-equiv=\"Content-Type\" content=\"text/html\; charset=UTF-8\" >\n
+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" >\n
       <title>Confirmation</title>\n
     </head>\n
 
@@ -138,10 +138,10 @@ function makeMsg($title, $message, $put_link) : string {
                 " . $title ."
             </h1>\n
             <p>". $message ."</p>\n
-            <p style=\"text-align: right\">Cordialement,<br/>L'équipe New Who</p>\n";
+            <p style=\"text-align: right\">Cordialement,<br>L'équipe New Who</p>\n";
 
     $link = $put_link ?
-    "<hr/>\n
+    "<hr>\n
     <ul style=\"list-style: none; padding: 0; margin: 0; display: flex; gap: 1em\">\n
     <li>\n
         <a href=\"http://mmi23f13.sae105.ovh/\" style=\"color: #555; text-decoration: none\">\n
