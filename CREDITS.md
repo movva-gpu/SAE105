@@ -17,7 +17,7 @@
 -   [Photo de Donna Noble, acolyte du 10ᵉ et du 14ᵉ Docteur](https://en.wikipedia.org/wiki/File:Donna_Noble.jpg) de Wikipédia
 -   [Photo de Rose Tyler, acolyte du 9ᵉ et du 10ᵉ](https://en.wikipedia.org/wiki/File:Rose_Tyler.jpg) de Wikipédia
 -   [Photo de Ruby Sunday, acolyte du 15ᵉ](<https://en.wikipedia.org/wiki/File:Ruby_Sunday_(Doctor_Who).jpg>) de Wikipédia
--   [Photo du TARDIS de 2008](https://commons.wikimedia.org/wiki/File:TARDIS1.jpg), sous licence [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) de Wikimedia Commons par Zir
+-   [Photo du TARDIS de 2008](https://commons.wikimedia.org/wiki/File:TARDIS1.jpg), sous licence [Creative Commons](https://creativecommons.org/) de Wikimedia Commons par Zir
 
 # Autres crédits
 
