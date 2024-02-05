@@ -20,6 +20,6 @@ function headGenerator($title, $description, $additional_keywords, $robots = "in
         '<meta name="keywords" content="Russell T Davies,Doctor Who,BBC,Fan Page,RTD,RT Davies,R.T.D.,' . $additional_keywords . '">' . "\n" .
         '<meta name="author" content="Danyella Strikann">' . "\n" .
         '<meta name="robots" content="' . $robots . '">' . "\n" .
-        '<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">' . "\n" .
+        '<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" integrity="sha256-RMISnWr29QZGsFcBE/2lZnHUhtvXWpDytIdOuvxuPtA= sha384-Zgrx648aN1zsOvJ05KDMACCaExuGOshE424e3XPGPNqbwckpCLqyjWqEF/AXi9Ze sha512-req6RX+7eqjPylBJ6ffR93F0js3ao2Pf6+LI9JF+l/MtPvf76M5yLeY2jAANrr4ty6aXQnOHNCF35lljYy9YZQ==" crossorigin="anonymous">' . "\n" .
         '<script src="https://kit.fontawesome.com/97cad273f1.js" crossorigin="anonymous"></script>' . "\n";
 }

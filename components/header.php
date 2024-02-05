@@ -15,7 +15,7 @@ switch ($url) {
     case 'index.php':
         $is_index_active = true;
         break;
-    case 'galerie.php':
+    case 'gallery.php':
         $is_galerie_active = true;
         break;
     case 'episodes.php':
@@ -54,7 +54,7 @@ if ($is_contact_active)
         <h2><a href='.'>R.T.D.</a></h2>
         <ul>
             <li><a class='<?= $index_class ?>' href='.' title='Accueil'>Accueil</a></li>
-            <li><a class='<?= $galerie_class ?>' href='galerie.php' title='Galerie'>Galerie</a></li>
+            <li><a class='<?= $galerie_class ?>' href='gallery.php' title='Galerie'>Galerie</a></li>
             <li><a class='<?= $donnees_class ?>' href='episodes.php' title='Episodes écrits par RTD'>Données</a></li>
             <li><a class='<?= $partenaires_class ?>' href='partners.php' title='Mes partenaires'>Partenaires</a></li>
             <li><a class='<?= $contact_class ?>' href='contact.php' title='Me contacter'>Contact</a></li>

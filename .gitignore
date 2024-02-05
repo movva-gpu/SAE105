@@ -8,3 +8,10 @@ assets/images/gallery
 /vendor/
 
 pdf/*
+
+node_modules/*
+
+# for styles.min.css and main.min.js
+*.min.* 
+
+data/*.csv
