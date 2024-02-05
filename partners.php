@@ -17,7 +17,7 @@
             </p>
             <div id="partners-container">
                 <div id="dan" class="jojo partners">
-                    <div class="background"><img src="assets/images/partners/dan_color.png"></div>
+                    <div class="background"><img src="assets/images/partners/dan_color.avif"></div>
                     <div class="content">
                         <h2>Danyella Strikann<span class="no-bg">✨</span><span class="me">(moi)</span></h2>
                         <small>Développeuse Full-Stack du projet</small>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div id="eug" class="jojo partners">
-                    <div class="background"><img src="assets/images/partners/eug_color.png"></div>
+                    <div class="background"><img src="assets/images/partners/eug_color.avif"></div>
                     <div class="content">
                         <h2>Eugénie Podevin<span class="no-bg">🩷</span></h2>
                         <small>Secrétaire et développeuse à temps partiel</small>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div id="noam" class="jojo partners">
-                    <div class="background"><img src="assets/images/partners/noam_color.png"></div>
+                    <div class="background"><img src="assets/images/partners/noam_color.avif"></div>
                     <div class="content">
                         <h2>Noam Brodeur<span class="no-bg">🐵</span></h2>
                         <small>Responsable graphique et éditorial</small>
