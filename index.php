@@ -22,7 +22,7 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
                 <i class="fa-solid fa-play"></i>
             </button>
             <video id="video" preload="auto" muted>
-                <source src="assets/video/dw_logo_intro.webm" type="video/webm">
+                <source src="assets/videos/dw_logo_intro.webm" type="video/webm">
             </video>';
         $_SESSION['video_watched'] = true;
     } ?>
