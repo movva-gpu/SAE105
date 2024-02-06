@@ -24,7 +24,7 @@ function headGenerator($title, $description, $additional_keywords, $robots = "in
         '<meta property="og:type" content="website">' . "\n" .
         '<meta property="og:title" content="' . $title . '">' . "\n" .
         '<meta property="og:url" content="http://mmi23f13.sae105.ovh' . $_SERVER['PHP_SELF'] . '">' . "\n" .
-        '<meta property="og:image" content="http://mmi23f13.sae105.ovh/assets/images/rtd.avif">' . "\n" .
+        '<meta property="og:image" content="http://mmi23f13.sae105.ovh/assets/images/opengraph.jpg">' . "\n" .
         '<meta property="og:description" content="' . $description . '">' . "\n" .
         '<meta name="theme-color" content="' . $color . '">' . "\n" .
 
