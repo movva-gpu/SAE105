@@ -84,7 +84,7 @@ header('Location: ../gallery.php?errors=none#upload');
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Téléversement de l\'image...', '', '', 'noindex, nofollow'); ?>
+    <?php headGenerator('Téléversement de l\'image...', '', '', 'noindex, nofollow'); ?>
 </head>
 
 </html>

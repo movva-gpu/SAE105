@@ -10,8 +10,8 @@
  *
  * @return string - The generated HTML head section.
  */
-function headGenerator($title, $description, $additional_keywords, $robots = "index, follow", $color = "#ffffff"): string {
-    return '<title>' . $title . '</title>' . "\n" .
+function headGenerator($title, $description, $additional_keywords, $robots = "index, follow", $color = "#ffffff") {
+    echo '<title>' . $title . '</title>' . "\n" .
         '<meta charset="UTF-8">' . "\n" .
         '<meta http-equiv="X-UA-Compatible" content="IE=edge">' . "\n" .
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n" .
@@ -23,8 +23,8 @@ function headGenerator($title, $description, $additional_keywords, $robots = "in
 
         '<meta property="og:type" content="website">' . "\n" .
         '<meta property="og:title" content="' . $title . '">' . "\n" .
-        '<meta property="og:url" content="' . $_SERVER['PHP_SELF'] . '">' . "\n" .
-        '<meta property="og:image" content="http://mmi23f13.sae105.ovh/favicon.svg">' . "\n" .
+        '<meta property="og:url" content="http://mmi23f13.sae105.ovh' . $_SERVER['PHP_SELF'] . '">' . "\n" .
+        '<meta property="og:image" content="http://mmi23f13.sae105.ovh/favicon.png">' . "\n" .
         '<meta property="og:description" content="' . $description . '">' . "\n" .
         '<meta name="theme-color" content="' . $color . '">' . "\n" .
 

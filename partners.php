@@ -3,7 +3,7 @@
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Partenaires', 'Nos partenaires', 'Partenaires'); ?>
+    <?php headGenerator('Partenaires', 'Nos partenaires', 'Partenaires'); ?>
 </head>
 
 <body>

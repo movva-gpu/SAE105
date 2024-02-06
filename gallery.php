@@ -4,7 +4,7 @@ error_reporting(0); ?>
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Galerie', 'La gallerie des saisons de RTD', 'Galerie'); ?>
+    <?php headGenerator('Galerie', 'La gallerie des saisons de RTD', 'Galerie'); ?>
 </head>
 
 <body>

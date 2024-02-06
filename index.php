@@ -6,7 +6,7 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Russell T Davies - Fan Page', 'Une fan page de Russell T Davies', 'Accueil'); ?>
+    <?php headGenerator('Russell T Davies - Fan Page', 'Une fan page de Russell T Davies', 'Accueil'); ?>
 </head>
 
 <body>

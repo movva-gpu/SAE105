@@ -158,7 +158,7 @@ function makeMsg($title, $message, $put_link) : string {
 <html lang='fr'>
 
 <head>
-    <?= headGenerator('Envoi du mail...', '', '', 'noindex, nofollow'); ?>
+    <?php headGenerator('Envoi du mail...', '', '', 'noindex, nofollow'); ?>
 </head>
 
 </html>

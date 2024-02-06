@@ -15,7 +15,7 @@ $md_html = Markdown::defaultTransform(file_get_contents('CREDITS.md'));
 <html lang="fr">
 
 <head>
-    <?= headGenerator('Références', 'Les références des images', 'références', 'noindex, nofollow'); ?>
+    <?php headGenerator('Références', 'Les références des images', 'références', 'noindex, nofollow'); ?>
 </head>
 
 <body>
