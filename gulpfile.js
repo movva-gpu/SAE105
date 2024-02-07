@@ -29,8 +29,8 @@ function removeIntegrityAttributes() {
 
 function phpSri() {
     return src('**/*.php', { ignore: 'vendor/**/*.php' })
-    .pipe(phpSri())
-    .pipe(dest('.'));
+        .pipe(phpsri())
+        .pipe(dest('.'));
 }
 
 exports.default = series(parallel(minifyCSS, minifyJS), removeIntegrityAttributes, phpSri);
