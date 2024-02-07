@@ -971,11 +971,12 @@ footer a {
         content: "";
         display: block;
         position: fixed;
-        bottom: calc((100vh - 100svh) * -1);
+        bottom: -10%;
         left: 0;
         width: 100%;
-        height: calc(100vh - 100svh);
+        height: 25%;
         background-color: white;
+        transition: cubic-bezier(0, 0, 0, 1) .67s;
     }
 
     nav ul.large {
