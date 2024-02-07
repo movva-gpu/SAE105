@@ -114,10 +114,10 @@ $(document).ready(async function () {
                 $(this).parent().prop('open', true)
                 updateStyles();
                 $('nav details ul li').css({
-                    animation: 'fadeWiden .33s cubic-bezier(0,0,0,1) forwards',
+                    animation: 'fadeWiden .67s cubic-bezier(0,0,0,1) forwards',
                 });
                 $('nav').css({
-                    transition: '.33s cubic-bezier(0,0,0,1)',
+                    transition: '.67s cubic-bezier(0,0,0,1)',
                     height: '100svh'
                 });
                 $('nav summary i').css({
@@ -128,6 +128,10 @@ $(document).ready(async function () {
                 $('nav details ul').css({
                     animation: ''
                 });
+
+                setTimeout(function () {
+                    $('.svh-fixer').css('bottom', '0');
+                }, 670);
             } else {
                 $('nav details ul').css({
                     animation: 'fadeWiden forwards reverse .67s ease-out'
@@ -144,6 +148,7 @@ $(document).ready(async function () {
                     transition: '.67s cubic-bezier(0,0,0,1)',
                     height: ''
                 });
+                $('.svh-fixer').css('bottom', '');
                 setTimeout(function () {
                     document.querySelector('nav details').open = false;
                     updateStyles();

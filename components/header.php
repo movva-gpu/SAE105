@@ -71,3 +71,4 @@ if ($is_contact_active)
         </details>
     </nav>
 </header>
+<div class="svh-fixer"></div>
