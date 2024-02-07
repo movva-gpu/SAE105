@@ -40,7 +40,7 @@ if (isset($_POST['watch-again'])) $watch_again = true; ?>
             </form>
             <h1>Russell T Davies</h1>
             <h2>Un show-runner Doctor Who</h2>
-            <img src='assets/images/rtd.avif' width="384" height="435" alt='Photo of Russel T Davies'>
+            <img class="rtd" src='assets/images/rtd.avif' width="384" height="435" alt='Photo of Russel T Davies'>
             <img class='dw' src='assets/images/dw-cropped.avif' alt='Logo de Doctor Who (2023)'>
             <img class='bbc' src='assets/images/bbc.avif' alt='Le logo de la BBC'>
             <p class="p">

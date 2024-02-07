@@ -32,4 +32,4 @@ if (str_contains($_SERVER['PHP_SELF'], 'episodes.php')) echo '
     '<script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/any-number.min.js"></script>'
 ?>
 
-<script src='js/main.min.js' integrity="sha256-fcUbOOiPFxKgQ4b8+l62tX3ehloPgnkJbMfKnKLq6zQ= sha384-QFFdz+so7kf9tH3MhR6B3kB53597wNbGyn/ir9XCV/lXaw0d52KgGA5lvUNoTfDL sha512-T0K8J57bItY+gNDWl52aPsDxeetGN8YSbAudnS3iSQmvy3AVl09R04iBnE3qqZfqKWCfUD2O+BC2EB/aX50jGQ==" crossorigin="anonymous"></script>
+<script src='js/main.min.js' crossorigin="anonymous"></script>

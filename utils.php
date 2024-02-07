@@ -28,7 +28,7 @@ function headGenerator($title, $description, $additional_keywords, $robots = "in
         '<meta property="og:description" content="' . $description . '">' . "\n" .
         '<meta name="theme-color" content="' . $color . '">' . "\n" .
 
-        '<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" integrity="sha256-xUEHOPRRNShezZ3FVXflP6H64Wdfg92KWQdi7fGsM9M= sha384-RIrIvpfdklIfK8Y485M+dsvjCO72tH+7LYfklICHzp1T4ekgTj7pEU2GqI5lU7XR sha512-b2kaKeEBMs5/Yhl5zCUqBYOQaP5ll1rlHfLbfsjxWAKTS06l885cZdDwk3y0qK5dzQ7EmG1BcVDU9rD66fypgQ==" crossorigin="anonymous">' . "\n" .
+        '<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" crossorigin="anonymous">' . "\n" .
 
         '<script src="https://kit.fontawesome.com/97cad273f1.js" crossorigin="anonymous"></script>' . "\n";
 }

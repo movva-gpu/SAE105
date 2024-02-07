@@ -105,6 +105,56 @@ $(document).ready(async function () {
             $(this).css({'--_mouseX': 0, '--_mouseY': 0, '--_lightTop': 0, '--_lightLeft': 0});
         });
     }
+
+    if ($('nav details summary')[0]) {
+        $('nav details summary').on('click', function (e) {
+            e.preventDefault();
+            console.log($(this).parent().prop('open'));
+            if (!$(this).parent().prop('open')) {
+                $(this).parent().prop('open', true)
+                updateStyles();
+                $('nav details ul li').css({
+                    animation: 'fadeWiden .33s cubic-bezier(0,0,0,1) forwards',
+                });
+                $('nav').css({
+                    transition: '.33s cubic-bezier(0,0,0,1)',
+                    height: '100svh'
+                });
+                $('nav summary i').css({
+                    rotate: '90deg',
+                    marginBottom: '.5em',
+                    transition: ''
+                });
+                $('nav details ul').css({
+                    animation: ''
+                });
+            } else {
+                $('nav details ul').css({
+                    animation: 'fadeWiden forwards reverse .67s ease-out'
+                });
+                console.log($('nav details').height() - $(this).height());
+                $('nav summary i').css({
+                    rotate: '0',
+                    marginBottom: '0',
+                    transitionDuration: '.67s',
+                    transform: `translateY(${($('nav details').height() - $(this).height()) / 2}px)`,
+                    rotate: '0deg'
+                });
+                $('nav').css({
+                    transition: '.67s cubic-bezier(0,0,0,1)',
+                    height: ''
+                });
+                setTimeout(function () {
+                    document.querySelector('nav details').open = false;
+                    updateStyles();
+                    $('nav summary i').css({
+                        transform: 'translateY(0)',
+                        transition: '0s'
+                    });
+                }, 670);
+            }
+        });
+    }
 });
 
 function updateStyles() {
@@ -113,7 +163,9 @@ function updateStyles() {
     let navLinks = $('nav a');
     let RTD = $('header h2');
 
-    if (scrollY == 0) {
+    console.log($('nav details').prop('open'));
+
+    if (scrollY == 0 || $('nav details').prop('open')) {
         header.css({backgroundColor: 'white', color: 'black'});
 
         navLinks.css({color: 'black', borderColor: 'black'});
