@@ -71,6 +71,7 @@ header {
 
 .svh-fixer {
     display: none;
+    z-index: 101;
 }
 
 nav h2 {
