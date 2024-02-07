@@ -806,8 +806,9 @@ footer a {
 }
 
 .jojo h2 span.emoji {
+    position: relative;
     display: inline-block;
-    color: black;
+    color: transparent;
 
     border-inline: .5ch;
 
@@ -816,6 +817,30 @@ footer a {
     scale: 0;
     rotate: 360deg;
     transition: cubic-bezier(0,0,0,1.42) .67s
+}
+
+.jojo h2 span.emoji::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: border-box center no-repeat;
+    background-size:  contain;
+}
+
+#dan h2 span.emoji::after {
+    background-image: url(../assets/images/partners/sparkles_3d.avif);
+}
+
+#eug h2 span.emoji::after {
+    background-image: url(../assets/images/partners/pink_heart_3d.avif);
+}
+
+#noam h2 span.emoji::after {
+    background-image: url(../assets/images/partners/monkey_face_3d.avif);
 }
 
 .jojo:hover h2 span.emoji {

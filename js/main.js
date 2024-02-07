@@ -11,12 +11,10 @@ $(document).ready(async function () {
 
         if (promise !== undefined) {
             await promise.then((_) => {
-                console.log('Browser supports autoplay.');
                 setTimeout(function () {
                     videoClose();
                 }, 11_500 - videAnimationDuration);
             }).catch((err) => {
-                console.log('Error while trying to play video.');
                 unmute();
                 $('#play').css({
                     display: 'block',
@@ -109,7 +107,6 @@ $(document).ready(async function () {
     if ($('nav details summary')[0]) {
         $('nav details summary').on('click', function (e) {
             e.preventDefault();
-            console.log($(this).parent().prop('open'));
             if (!$(this).parent().prop('open')) {
                 $(this).parent().prop('open', true)
                 updateStyles();
@@ -137,7 +134,6 @@ $(document).ready(async function () {
                 $('nav details ul').css({
                     animation: 'fadeWiden forwards reverse .67s ease-out'
                 });
-                console.log($('nav details').height() - $(this).height());
                 $('nav summary i').css({
                     rotate: '0',
                     marginBottom: '0',
@@ -171,8 +167,6 @@ function updateStyles() {
     let header = $('header');
     let navLinks = $('nav a');
     let RTD = $('header h2');
-
-    console.log($('nav details').prop('open'));
 
     if (scrollY == 0 || $('nav details').prop('open')) {
         header.css({backgroundColor: 'white', color: 'black'});
