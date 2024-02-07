@@ -21,11 +21,16 @@ function minifyJS() {
         .pipe(dest('js/'));
 }
 
-function phpSri() {
+function removeIntegrityAttributes() {
     return src('**/*.php', { ignore: 'vendor/**/*.php' })
         .pipe(replace(/ integrity="[a-zA-Z\- 0-9+/=]*"/g, ''))
-        .pipe(phpsri())
         .pipe(dest('.'));
 }
 
-exports.default = series(parallel(minifyCSS, minifyJS), phpSri);
+function phpSri() {
+    return src('**/*.php', { ignore: 'vendor/**/*.php' })
+    .pipe(phpSri(/ integrity="[a-zA-Z\- 0-9+/=]*"/g, ''))
+    .pipe(dest('.'));
+}
+
+exports.default = series(parallel(minifyCSS, minifyJS), removeIntegrityAttributes, phpSri);
