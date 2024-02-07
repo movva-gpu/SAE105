@@ -127,6 +127,7 @@ $(document).ready(async function () {
                 });
 
                 $('.svh-fixer').css({
+                    display: 'block',
                     bottom: '0',
                     transition: 'cubic-bezier(0, 0, 0, 1) 1.33s'
                 });
@@ -156,6 +157,7 @@ $(document).ready(async function () {
                         transform: 'translateY(0)',
                         transition: ''
                     });
+                    $('.svh-fixer').css('display', '');
                 }, 670);
             }
         });

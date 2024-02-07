@@ -993,7 +993,6 @@ footer a {
     }
 
     .svh-fixer {
-        display: block !important;
         content: "";
         display: block;
         position: fixed;
