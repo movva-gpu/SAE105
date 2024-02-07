@@ -29,7 +29,7 @@ function removeIntegrityAttributes() {
 
 function phpSri() {
     return src('**/*.php', { ignore: 'vendor/**/*.php' })
-    .pipe(phpSri(/ integrity="[a-zA-Z\- 0-9+/=]*"/g, ''))
+    .pipe(phpSri())
     .pipe(dest('.'));
 }
 
