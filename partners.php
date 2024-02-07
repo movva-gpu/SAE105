@@ -19,7 +19,7 @@
                 <div id="dan" class="jojo partners">
                     <div class="background"><img alt="Photograpgie de Danyella avec un filtre dans le style de Jojo Bizarre Adventure" src="assets/images/partners/dan_color.avif"></div>
                     <div class="content">
-                        <h2><span class="title">Danyella Strikann</span><span class="emoji">&#9632;</span><span class="me">(moi)</span></h2>
+                        <h2><span class="title">Danyella Strikann</span><span class="emoji">&#9786;</span><span class="me">(moi)</span></h2>
                         <small>Développeuse Full-Stack du projet</small>
                         <p>
                             Salut moi c'est Danyella et ce beau site là, c'est moi qui l'ai fait !
@@ -29,7 +29,7 @@
                 <div id="eug" class="jojo partners">
                     <div class="background"><img alt="Photographie d'Eugénie avec un filtre dans le style de Jojo Bizarre Adventure" src="assets/images/partners/eug_color.avif"></div>
                     <div class="content">
-                        <h2><span class="title">Eugénie Podevin</span><span class="emoji">&#9632;</span></h2>
+                        <h2><span class="title">Eugénie Podevin</span><span class="emoji">&#9786;</span></h2>
                         <small>Secrétaire et développeuse à temps partiel</small>
                         <p>
                             Salut ! Moi c'est Eugénie, j'ai 19 ans et je suis la secrétaire de l'entreprise et, en même temps, développeuse à temps partiel. J'ai choisi de travailler pour l'association qui parle des vocaloids. 
@@ -43,7 +43,7 @@
                 <div id="noam" class="jojo partners">
                     <div class="background"><img alt="Photographie de Noam avec un filtre dans le style de Jojo Bizarre Adventure" src="assets/images/partners/noam_color.avif"></div>
                     <div class="content">
-                        <h2><span class="title">Noam Brodeur</span><span class="emoji">&#9632;</span></h2>
+                        <h2><span class="title">Noam Brodeur</span><span class="emoji">&#9786;</span></h2>
                         <small>Responsable graphique et éditorial</small>
                         <p>
                             Je m'appelle Noam, je suis le responsable éditorial et graphique du projet. Sur mon site tu vas pouvoir découvrir CinéTalk. 
