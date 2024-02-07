@@ -133,12 +133,6 @@ $(document).ready(async function () {
                     bottom: '0',
                     transition: 'cubic-bezier(0, 0, 0, 1) 1.33s'
                 });
-
-                setTimeout(function() {
-                    $('.svh-fixer').css({
-                        transition: 'none'
-                    });
-                }, 1330);
             } else {
                 $('nav details ul').css({
                     animation: 'fadeWiden forwards reverse .67s ease-out'
@@ -164,13 +158,9 @@ $(document).ready(async function () {
                     updateStyles();
                     $('nav summary i').css({
                         transform: 'translateY(0)',
+                        transition: ''
                     });
                 }, 670);
-                setTimeout(function() {
-                    $('.svh-fixer').css({
-                        transition: 'none'
-                    });
-                }, 1330);
             }
         });
     }
