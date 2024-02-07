@@ -136,7 +136,7 @@ $(document).ready(async function () {
 
                 setTimeout(function() {
                     $('.svh-fixer').css({
-                        transition: '0s'
+                        transition: 'none'
                     });
                 }, 1330);
             } else {
@@ -164,12 +164,11 @@ $(document).ready(async function () {
                     updateStyles();
                     $('nav summary i').css({
                         transform: 'translateY(0)',
-                        transition: '0s'
                     });
                 }, 670);
                 setTimeout(function() {
                     $('.svh-fixer').css({
-                        transition: '0s'
+                        transition: 'none'
                     });
                 }, 1330);
             }
