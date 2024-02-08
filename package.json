@@ -18,10 +18,11 @@
     "homepage": "https://github.com/movva-gpu/SAE105#readme",
     "devDependencies": {
         "gulp": "^4.0.2",
-        "gulp-minify-css": "^1.2.4",
-        "gulp-uglify": "^3.0.2",
         "gulp-csso": "^4.0.1",
-        "gulp-rename": "^2.0.0"
+        "gulp-minify-css": "^1.2.4",
+        "gulp-rename": "^2.0.0",
+        "gulp-replace": "^1.1.4",
+        "gulp-uglify": "^3.0.2"
     },
     "dependencies": {
         "graceful-fs": "^4.2.11"
