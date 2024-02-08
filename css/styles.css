@@ -1014,6 +1014,15 @@ footer a {
         background-size: 550%;
     }
 
+    #gallery *:hover {
+        border: 0 none !important;
+        transform: none !important;
+    }
+
+    .gallery-div::after {
+        display: none !important;
+    }
+
     .svh-fixer {
         content: "";
         display: block;
